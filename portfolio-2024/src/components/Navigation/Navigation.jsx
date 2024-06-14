@@ -3,11 +3,12 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faInfoCircle, faProjectDiagram, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../assets/logo-white.png';
+import './Navigation.css';
 
 function Navigation() {
     return (
-      <Navbar bg="dark" variant="dark" expand="lg">
-        <Container>
+      <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
+        <Container fluid>
           <Navbar.Brand href="#home">
             <img
               src={logo}
@@ -18,17 +19,17 @@ function Navigation() {
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end custom-margin-right">
             <Nav className="ml-auto">
-              <Nav.Link href="#home"><FontAwesomeIcon icon={faHome} /> Home</Nav.Link>
-              <Nav.Link href="#about"><FontAwesomeIcon icon={faInfoCircle} /> About</Nav.Link>
-              <Nav.Link href="#projects"><FontAwesomeIcon icon={faProjectDiagram} /> Projects</Nav.Link>
+              <Nav.Link href="#home" className="nav-item"><FontAwesomeIcon icon={faHome} /> Home</Nav.Link>
+              <Nav.Link href="#about" className="nav-item"><FontAwesomeIcon icon={faInfoCircle} /> About</Nav.Link>
+              <Nav.Link href="#projects" className="nav-item"><FontAwesomeIcon icon={faProjectDiagram} /> Projects</Nav.Link>
               <Nav.Link href="#contact"><FontAwesomeIcon icon={faEnvelope} /> Contact</Nav.Link>
-            </Nav>
+            </Nav>  
           </Navbar.Collapse>
         </Container>
       </Navbar>
     );
-};
+}
 
-export default Navigation
+export default Navigation;
