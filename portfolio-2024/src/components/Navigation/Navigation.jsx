@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faInfoCircle, faProjectDiagram, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import logo from '../../assets/logo-white.png';
 
 function Navigation() {
     return (
@@ -9,9 +10,9 @@ function Navigation() {
         <Container>
           <Navbar.Brand href="#home">
             <img
-              src="#" //Insert logo
-              width="30"
-              height="30"
+              src={logo}
+              width="120"
+              height="auto"
               className="d-inline-block align-top"
               alt="Logo"
             />
