@@ -1,0 +1,35 @@
+  .banner {
+    background-color: #c3c3c3;
+  }
+  
+  .text-container {
+    text-align: left;
+  }
+  
+  .text-primary {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .text-danger {
+    color: rgb(24, 24, 24);
+  }
+  
+  .animation-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  @media (max-width: 767.98px) {
+    .banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .animation-container {
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  }
