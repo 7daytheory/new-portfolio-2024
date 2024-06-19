@@ -8,7 +8,7 @@ import './Navigation.css';
 function Navigation() {
     return (
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
-        <Container fluid>
+        <Container>
           <Navbar.Brand href="#home">
             <img
               src={logo}

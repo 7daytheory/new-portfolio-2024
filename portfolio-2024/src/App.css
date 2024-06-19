@@ -1,0 +1,39 @@
+/* src/App.css */
+.App-header {
+    /* Your navigation bar styles here */
+  }
+  
+  .banner {
+    background-color: #f8f9fa;
+  }
+  
+  .text-container {
+    text-align: left;
+  }
+  
+  .text-primary {
+    color: red;
+  }
+  
+  .text-danger {
+    color: black;
+  }
+  
+  .animation-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  @media (max-width: 767.98px) {
+    .banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .animation-container {
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  }
+  
