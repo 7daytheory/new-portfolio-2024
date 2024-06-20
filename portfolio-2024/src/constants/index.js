@@ -1,10 +1,10 @@
 // Data exported to the website and displayed
 
-import {
-    chatApp,
-    simon,
-    summarize,
-  } from "../../assets";
+// import {
+//     chatApp,
+//     simon,
+//     summarize,
+//   } from "../assets";
   
   const experiences = [
     {
@@ -45,7 +45,7 @@ import {
     {
       title: "BPMS Administrator",
       company_name: "NeXsys",
-      icon: php,
+      icon: '',
       iconBg: "#5eb54a",
       date: "May 2010 - July 2010",
       points: [
@@ -55,71 +55,5 @@ import {
       ],
     },
   ];
-  
-//   const projects = [
-//     {
-//       name: "AI Article Summarizer",
-//       description:
-//         "AI application that will sumarize and save articles.",
-//       tags: [
-//         {
-//           name: "react",
-//           color: "blue-text-gradient",
-//         },
-//         {
-//           name: "html",
-//           color: "green-text-gradient",
-//         },
-//         {
-//           name: "css",
-//           color: "pink-text-gradient",
-//         },
-//       ],
-//       image: summarize,
-//       source_code_link: "https://github.com/7daytheory/custom-ai",
-//     },
-//     {
-//       name: "Simon",
-//       description:
-//         "Digital version of the game Simon.",
-//       tags: [
-//         {
-//           name: "javascript",
-//           color: "blue-text-gradient",
-//         },
-//         {
-//           name: "css",
-//           color: "green-text-gradient",
-//         },
-//         {
-//           name: "html",
-//           color: "pink-text-gradient",
-//         },
-//       ],
-//       image: simon,
-//       source_code_link: "https://github.com/7daytheory/simon",
-//     },
-//     {
-//       name: "Chat application",
-//       description:
-//         "Two-way chat application where you can talk to others",
-//       tags: [
-//         {
-//           name: "react",
-//           color: "blue-text-gradient",
-//         },
-//         {
-//           name: "javascript",
-//           color: "green-text-gradient",
-//         },
-//         {
-//           name: "css",
-//           color: "pink-text-gradient",
-//         },
-//       ],
-//       image: chatApp,
-//       source_code_link: "https://github.com/7daytheory/chat-app",
-//     },
-//   ];
-  
-  export { experiences };  //Will add more
+    
+  export { experiences };
