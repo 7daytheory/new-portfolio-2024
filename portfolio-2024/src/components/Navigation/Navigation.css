@@ -1,20 +1,15 @@
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  .navbar {
-    margin-bottom: 20px;
-    justify-content: end;
-  }
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
 
-  .custom-margin-right {
-    padding-right: 2rem;
-  }
+.navbar {
+  margin-bottom: 20px;
+}
 
-  .nav-item {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+.nav-item {
+  margin-left: 15px;
+  margin-right: 15px;
+}
