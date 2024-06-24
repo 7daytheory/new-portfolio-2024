@@ -1,24 +1,23 @@
-/* src/components/Banner.css */
 .banner {
   background-color: #f8f9fa;
-  max-width: 1200px;
-  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px 0;
+  border: 2px solid #333;
+  border-radius: 5px;
+  margin-top: 25px;
 }
 
 .text-container {
-  text-align: left;
+  padding-left: 15px;
 }
 
 .text-primary {
-  color: red;
+  color: #007bff;
 }
 
 .text-danger {
-  color: black;
+  color: #dc3545;
 }
 
-.animation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.text-success {
+  color: #28a745;
 }
