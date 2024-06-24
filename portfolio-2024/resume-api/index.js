@@ -7,9 +7,8 @@ const experiences = [
     {
       title: "Full Stack Developer",
       company_name: "ShipEarly",
-      iconBg: "#ff6347",
       date: "Aug 2023 – 2024 (9-month contract)",
-      points: [
+      tasks: [
         "Joined a small startup on a contract to help them grow",
         "Worked on their back end using Cake 2 PHP to develop a sales system that was integrated with salesforce",
         "Worked with Git, did code reviews and integrated it with Trello",
@@ -19,9 +18,8 @@ const experiences = [
     {
       title: "Front End Developer",
       company_name: "Lawlabs",
-      iconBg: "#ff6347",
       date: "2021 - 2023",
-      points: [
+      tasks: [
         "Worked on their SASS product using Angular",
         "Worked as a team to turn designs into functioning website or SASS functionality",
         "Worked with Git, did code reviews and stand ups every morning",
@@ -31,9 +29,8 @@ const experiences = [
     {
       title: "Developer",
       company_name: "Quillsoft",
-      iconBg: "#46b1c9",
       date: "2017 - 2021",
-      points: [
+      tasks: [
         "Created and oversaw growth of the CRM system",
         "Built a PWA of the main desktop application for schools",
         "Developed a license management system",
@@ -43,9 +40,8 @@ const experiences = [
     {
       title: "Developer",
       company_name: "Strategic Transitions Inc",
-      iconBg: "#9ccd5d",
       date: "2014 – 2017",
-      points: [
+      tasks: [
         "Created and integrated a license management system",
         "Developed encryption for user data security",
         "Developed a customized CMS system",
@@ -55,9 +51,8 @@ const experiences = [
     {
       title: "BPMS Administrator",
       company_name: "NeXsys",
-      iconBg: "#5eb54a",
       date: "2013",
-      points: [
+      tasks: [
         "Created and integrated a license management system",
         "Developed encryption for user data security",
         "Developed a customized CMS system",
