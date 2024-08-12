@@ -1,35 +1,48 @@
-import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faInfoCircle, faProjectDiagram, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../assets/logo-white.png';
-import './Navigation.css';
+import React from 'react';
 
-function Navigation() {
+const Navbar = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
-      <Container>
-        <Navbar.Brand href="#home">
-          <img
-            src={logo}
-            width="120"
-            height="auto"
-            className="d-inline-block align-top"
-            alt="Logo"
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
-          <Nav className="mx-auto">
-            <Nav.Link href="#home" className="nav-item"><FontAwesomeIcon icon={faHome} /> Home</Nav.Link>
-            <Nav.Link href="#about" className="nav-item"><FontAwesomeIcon icon={faInfoCircle} /> About</Nav.Link>
-            <Nav.Link href="#projects" className="nav-item"><FontAwesomeIcon icon={faProjectDiagram} /> Projects</Nav.Link>
-            <Nav.Link href="#contact" className="nav-item"><FontAwesomeIcon icon={faEnvelope} /> Contact</Nav.Link>
-          </Nav>  
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className='bg-[#333] border-b border-white'>
+      <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
+        <div className='flex h-20 items-center justify-between'>
+          <div className='flex flex-1 items-center justify-center md:items-stretch md:justify-start'>
+            <a
+            href="/" 
+            className='flex flex-shrink-0 items-center mr-4'>
+            <img className='h-10 w-auto' src={logo} alt='Matthew Logo' />
+              <span className='hidden md:block text-white text-2xl font-bold ml-2'>
+                Matthew Lowe Portfolio
+              </span>
+            </a>
+            <div className='md:ml-auto'>
+              <div className='flex space-x-2'>
+                <a
+                to="/" 
+                className='bg-[#E31837] hover:bg-[#333] text-white hover:text-white rounded-md px-3 py-2'>
+                  Home
+                </a>
+                <a
+                to="#" 
+                className='bg-[#E31837] hover:bg-[#333] text-white hover:text-white rounded-md px-3 py-2'>
+                  About
+                </a>
+                <a
+                to="#" 
+                className='bg-[#E31837] hover:bg-[#333] text-white hover:text-white rounded-md px-3 py-2'>
+                  Experience
+                </a>
+                <a
+                to="#" 
+                className='bg-[#E31837] hover:bg-[#333] text-white hover:text-white rounded-md px-3 py-2'>
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
-}
-
-export default Navigation;
+};
+export default Navbar;
