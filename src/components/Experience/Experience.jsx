@@ -5,6 +5,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../../constants";
+import './Experience.css';
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -16,6 +17,7 @@ const ExperienceCard = ({ experience }) => {
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
+      lineColor = '#333'
       icon={
         <div className='flex justify-center items-center w-full h-full'>
           {/* Optional: Add an icon here */}
@@ -55,6 +57,7 @@ const Experience = () => {
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
+              lineColor={'black'}
             />
           ))}
         </VerticalTimeline>
@@ -63,5 +66,4 @@ const Experience = () => {
   );
 };
 
-// export default SectionWrapper(Experience, "work"); // Uncomment if using SectionWrapper
 export default Experience;
