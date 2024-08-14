@@ -5,9 +5,9 @@ import lottiePerson from '../../assets/lottie/lottieHeader.json';
 const Banner = () => {
   return (
     <div className="flex justify-center py-6 bg-gray-100">
-      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-screen-xl px-4">
+      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-screen-xl px-4 max-w-80p">
         <div className="flex-1 md:mr-4 text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold text-black mb-4">
+          <h1 className="text-6xl md:text-5xl font-bold text-black mb-4">
             Hello, I'm Matthew!
           </h1>
           <p className="text-lg md:text-2xl text-gray-700">
