@@ -1,4 +1,5 @@
 import Banner from './components/Banner/Banner'
+import Experience from './components/Experience/Experience'
 import Navigation from './components/Navigation/Navigation'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Navigation />
       <Banner />
+      <Experience />
     </>
   )
 }
