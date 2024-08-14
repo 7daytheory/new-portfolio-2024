@@ -1,12 +1,13 @@
 import './App.css'
+import Banner from './components/Banner/Banner'
 import Navigation from './components/Navigation/Navigation'
 
 function App() {
   return (
     <>
-        <Navigation />
+      <Navigation />
       <div className="content">
-      {/* Non Full Width Content Here*/}
+        <Banner />
       </div>
     </>
   )
