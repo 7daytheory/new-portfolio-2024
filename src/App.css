@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.content {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .content {
+    width: 70%;
+    text-align: left;
+    padding: 20px;
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+  .content {
+    width: 75%;
+    padding: 40px;
+  }
+}
