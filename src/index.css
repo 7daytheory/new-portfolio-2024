@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.vertical-timeline.vertical-timeline--two-columns:before {
-    background: #1d1836;
-  }
+body {
+  background: rgb(243 244 246);
+}
