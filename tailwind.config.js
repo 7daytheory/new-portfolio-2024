@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+      maxWidth: {
+        '80p': '80%',
+      },
   },
   plugins: [],
 }
