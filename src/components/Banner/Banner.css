@@ -33,7 +33,6 @@
     line-height: 40px;
   }
   
-  /* Media Query */
   @media (max-width: 1380px) {
     .banner-text {
       font-size: 50px;
