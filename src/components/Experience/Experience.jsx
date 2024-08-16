@@ -6,7 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../../content";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown, faArrowsDownToLine } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Fade } from "react-awesome-reveal";
 
 
@@ -54,7 +54,7 @@ const Experience = () => {
     <>
       <div className='flex flex-col bg-slate-800 mt-[50px]'>
         <VerticalTimeline>
-        <Fade duration={3500} triggerOnce><h1 className="text-white text-[3em] absolute ml-[45px] top-[-22px] font-bold">EXPERIENCE <FontAwesomeIcon icon={faArrowDown} /></h1></Fade>
+        <Fade duration={3500} triggerOnce><h1 className="text-white text-[3em] absolute ml-[10%] top-[-22px] font-bold">EXPERIENCE <FontAwesomeIcon icon={faArrowDown} /></h1></Fade>
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
