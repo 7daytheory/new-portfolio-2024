@@ -1,18 +1,19 @@
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Fade } from 'react-awesome-reveal'
 
 const Footer = () => {
   return (
-    <section class="bg-white">
+    <section class="bg-white relative">
         <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+        <Fade duration={2500} triggerOnce>
+            <div className="text-red-800 text-[3em] absolute ml-[10%] top-[-22px] font-bold">ADDENDUM <FontAwesomeIcon icon={faArrowDown} /></div>
+        </Fade>
             <nav class="flex flex-wrap justify-center -mx-5 -my-2">
                 <div class="px-5 py-2">
                     <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                        About
-                    </a>
-                </div>
-                <div class="px-5 py-2">
-                    <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                        Work
+                        Home
                     </a>
                 </div>
                 <div class="px-5 py-2">
@@ -22,17 +23,22 @@ const Footer = () => {
                 </div>
                 <div class="px-5 py-2">
                     <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                        Pricing
+                        Resume
+                    </a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                        Examples
+                    </a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                        Request a Quote
                     </a>
                 </div>
                 <div class="px-5 py-2">
                     <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                         Contact
-                    </a>
-                </div>
-                <div class="px-5 py-2">
-                    <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                        Terms
                     </a>
                 </div>
             </nav>
