@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="text-red-800 text-[3em] absolute ml-[10%] top-[-22px] font-bold">ADDENDUM <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
-                <Fade direction="left" duration={750} cascade triggerOnce>
+                <Fade direction="up" duration={500} cascade triggerOnce>
                     <ul className="flex flex-wrap justify-center -mx-5 -my-2">
                         <li className="px-5 py-2">
                             <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
