@@ -54,7 +54,7 @@ const Experience = () => {
     <>
       <div className='flex flex-col bg-slate-800 mt-[50px]'>
         <VerticalTimeline>
-        <Fade duration={3500} triggerOnce><h1 className="text-white text-[3em] absolute ml-[45px] top-[-22px] font-bold">EXPERIENCE <FontAwesomeIcon icon={faArrowDown} /></h1></Fade>
+        <Fade duration={3500} triggerOnce><h1 className="text-white text-[3em] absolute ml-[10%] top-[-22px] font-bold">EXPERIENCE <FontAwesomeIcon icon={faArrowDown} /></h1></Fade>
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
