@@ -9,6 +9,40 @@ const Navigation = () => {
         toggleMobileMenu(!mobileMenu);
     };
 
+    const navMenu = (
+        <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+        <li>
+            <a href="#" className="block py-2 px-3 md:p-0 text-white bg-red-700 rounded md:bg-transparent md:text-700 md:dark:text-red-500 dark:bg-red-600 md:dark:bg-transparent" aria-current="page">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                Experience
+            </a>
+        </li>
+        <li>
+            <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                Resume
+            </a>
+        </li>
+        <li>
+            <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                Examples
+            </a>
+        </li>
+        <li>
+            <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                Request a Quote
+            </a>
+        </li>
+        <li>
+            <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                Contact
+            </a>
+        </li>
+        </ul>);
+        
     return (
         <nav className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
             <div className="container mx-auto p-4" style={{ maxWidth: "75%" }}>
@@ -46,40 +80,15 @@ const Navigation = () => {
                     >
                         <div className="flex flex-wrap justify-center -mx-5 -my-2">
                             <div className="px-5 py-2">
-                                <Fade direction='down' duration={750} cascade triggerOnce>
-                                <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-                                    <li>
-                                        <a href="#" className="block py-2 px-3 md:p-0 text-white bg-red-700 rounded md:bg-transparent md:text-700 md:dark:text-red-500 dark:bg-red-600 md:dark:bg-transparent" aria-current="page">
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                                            Experience
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                                            Resume
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                                            Examples
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                                            Request a Quote
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                                            Contact
-                                        </a>
-                                    </li>
-                                    </ul>
+                            {!mobileMenu ? (
+                            <Fade direction="down" duration={750} cascade triggerOnce>
+                                {navMenu}
+                            </Fade>
+                                ) : (
+                                    <Fade direction="down" duration={500} triggerOnce>
+                                    {navMenu}
                                 </Fade>
+                                )}
                             </div>
                         </div>
                     </div>
