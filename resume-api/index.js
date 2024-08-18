@@ -16,17 +16,6 @@ const experiences = [
       ],
     },
     {
-      title: "Front End Developer",
-      company_name: "Lawlabs",
-      date: "2021 - 2023",
-      tasks: [
-        "Worked on their SASS product using Angular",
-        "Worked as a team to turn designs into functioning website or SASS functionality",
-        "Worked with Git, did code reviews and stand ups every morning",
-        "Presented work and ideas to the owner regularly"
-      ],
-    },
-    {
       title: "Developer",
       company_name: "Quillsoft",
       date: "2017 - 2021",
