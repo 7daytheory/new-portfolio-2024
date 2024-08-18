@@ -14,12 +14,13 @@ const Banner = () => {
           </span>
           <Fade direction='left' duration={1500}><span className="relative z-2">I am <span className="text-red-600">Matthew.</span></span></Fade>
         </h1>
+        <Fade direction='down' duration={2000}>
           <p className="relative text-lg md:text-md text-gray-700 z-2">
-          <Fade direction='down' duration={2000}>
             I am a developer with over 9 years experience. 
             I build Web and Mobile applications with JavaScript, React/Angular, PHP, Laravel/CakePHP, Bootstrap, Flexbox, and other cool libraries and frameworks. 
-            I also have a background in graphic design which has been a useful skill for smaller companies or for hot fixes.</Fade>
+            I also have a background in graphic design which has been a useful skill for smaller companies or for hot fixes.
           </p>
+        </Fade>
         </div>
         <div className="flex-1 md:ml-4 mt-6 md:mt-0 flex justify-center">
           <Fade direction="right" duration={1500}>
