@@ -75,6 +75,7 @@ import RequestKey from '../RequestKey/RequestKey';
             </Fade>
             </div>
         </div>
+        <RequestKey />
     </div>
       );
     }
