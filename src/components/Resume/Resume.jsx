@@ -18,7 +18,7 @@ import RequestKey from '../RequestKey/RequestKey';
             }
         };
     
-        // Effect to set up ResizeObserver
+    // Effect to set up ResizeObserver
     useEffect(() => {
         const wrapElement = wrapRef.current;
 
@@ -28,11 +28,8 @@ import RequestKey from '../RequestKey/RequestKey';
 
         if (wrapElement) resizeObserver.observe(wrapElement);
 
-        // Initial dimension update
         updateDimensions();
     }, []); // Empty dependency array to run only on mount and unmount
-
-    console.log('Wrap Width:', wrapWidth);
 
     return (
     <div className="relative w-full p-4 text-center bg-white border border-white shadow sm:p-8 dark:bg-red-800 dark:border-gray-700">
@@ -51,8 +48,8 @@ import RequestKey from '../RequestKey/RequestKey';
             <a href="#" className="w-full inline mb-[25px] sm:w-auto bg-slate-800 hover:bg-slate-700 space-x-4 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.25)] inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
             <img 
                     src={apiLogo} 
-                    alt="Api Logo" 
-                    className="me-3" 
+                    alt="Api Logo"
+                    className="me-3"
                     style={{ width: '100px', height: 'auto' }} 
                 />
                 <div className="text-left rtl:text-right">
@@ -75,7 +72,7 @@ import RequestKey from '../RequestKey/RequestKey';
             </Fade>
             </div>
         </div>
-        <RequestKey />
+        <RequestKey wrapWidth={wrapWidth} />
     </div>
       );
     }
