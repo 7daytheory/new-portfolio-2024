@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 
 const RequestKey = ( { wrapWidth }) => {
-  console.log(wrapWidth);
+  const firstNameRef = useRef(null);
+  const [notification, setNotification] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const firstName = firstNameRef.current.value.trim();
+    
+    if (!firstName) {
+      setNotification('Please fill out the form to get an API key.');
+      firstNameRef.current.focus();
+      return;
+    }
+
+    setNotification('');
+    // Display API Key
+  };
   return (
     <div className="p-6 bg-gray border-lg border-2 border-slate-800 md:border-slate-800 rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.25)] m-auto"
          style={{width: `${wrapWidth}px`}}
       >
       <h1 className="font-bold text-white tracking-widest">Request an API Key</h1>
-      <p className="italic text-[12px] m-2 text-white tracking-wide">*I am not storing any of your personal information from this form</p>
       <form className="max-w-md mx-auto">
         <div className="grid md:grid-cols-2 md:gap-6">
           <div className="relative z-0 w-full mb-5 group">
