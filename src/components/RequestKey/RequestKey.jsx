@@ -4,6 +4,20 @@ const RequestKey = ( { wrapWidth }) => {
   const firstNameRef = useRef(null);
   const [notification, setNotification] = useState('');
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const firstName = firstNameRef.current.value.trim();
+    
+    if (!firstName) {
+      setNotification('Please fill out the form to get an API key.');
+      firstNameRef.current.focus();
+      return;
+    }
+
+    //Display Notification when useRef is selected
+    setNotification('');
+  };
+
   return (
     <div
       className="p-6 bg-gray border-lg border-2 border-slate-800 md:border-slate-800 rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.25)] m-auto"
