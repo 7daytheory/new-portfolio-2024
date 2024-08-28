@@ -32,7 +32,7 @@ import RequestKey from '../RequestKey/RequestKey';
 
     const handleApiClick = (e) => {
         e.preventDefault();
-        setShowRequestForm(prev => !prev);
+        setShowRequestForm(!showRequestForm);
     };
 
     return (
@@ -76,7 +76,12 @@ import RequestKey from '../RequestKey/RequestKey';
             </Fade>
             </div>
         </div>
-        {showRequestForm && <RequestKey wrapWidth={wrapWidth} />}
+        {showRequestForm && (
+                <RequestKey
+                    wrapWidth={wrapWidth}
+                    closeForm={() => setShowRequestForm(false)}
+                />
+            )}
     </div>
       );
     }
