@@ -1,11 +1,13 @@
 import React from 'react';
 
-const RequestKey = ({ wrapWidth }) => {
+const RequestKey = ({ wrapWidth, closeForm }) => {
   return (
     <div
-      className="p-6 bg-gray border-lg border-2 border-slate-800 md:border-slate-800 rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.25)] m-auto"
+      className="p-6 bg-gray border-lg border-2 relative border-slate-800 md:border-slate-800 rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.25)] m-auto"
       style={{ width: `${wrapWidth}px` }}
     >
+      <p className="absolute top-[0] font-bold right-[10px] text-white cursor-pointer"
+        onClick={closeForm}>x</p>
       <h1 className="font-bold text-white tracking-widest text-center">Request an API Key</h1>
       <form className="max-w-md mx-auto text-left">
         <div className="grid md:grid-cols-2 md:gap-6">
