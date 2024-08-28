@@ -32,12 +32,7 @@ import RequestKey from '../RequestKey/RequestKey';
 
     const handleApiClick = (e) => {
         e.preventDefault();
-
-        if(showRequestForm) {
-            setShowRequestForm(false);
-        }
-        
-        setShowRequestForm(true);
+        setShowRequestForm(prev => !prev);
     };
 
     return (
