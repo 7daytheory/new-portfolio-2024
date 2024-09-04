@@ -26,7 +26,7 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-      <div>
+      <div id="experience">
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
         <p
           className='text-secondary text-[16px] font-semibold'
