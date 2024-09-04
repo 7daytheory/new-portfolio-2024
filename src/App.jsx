@@ -1,4 +1,5 @@
 import Banner from './components/Banner/Banner'
+import Contact from './components/Contact/Contact'
 import Experience from './components/Experience/Experience'
 import Footer from './components/Footer/Footer'
 import Navigation from './components/Navigation/Navigation'
@@ -13,6 +14,7 @@ function App() {
       <Experience />
       <Resume />
       <Projects />
+      <Contact />
       <Footer />
     </>
   )
