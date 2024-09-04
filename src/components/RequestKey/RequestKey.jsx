@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const RequestKey = ({ wrapWidth, closeForm }) => {
   const [firstName , setFirstName] = useState('');
@@ -6,20 +7,37 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
   const [emailValue, setEmailValue] = useState('');
   const [phoneValue, setPhoneValue] = useState('');
   const [companyValue, setCompanyValue] = useState('');
+  const [keyValue, setKeyValue] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("submitted!");
+    // Generate API key
+    const generatedKey = 'ABC123XYZ'; // temporary key
+    setKeyValue(generatedKey);
 
-    //Generate API key
-    
-    //Send Request values to email
+    // Prepare the email parameters
+    const emailParams = {
+      firstName,
+      lastName,
+      email: emailValue,
+      phone: phoneValue,
+      company: companyValue,
+      apiKey: generatedKey, // create the apiKey
+    };
 
-    //Display API Key on page
-
-    // Email key to user on page as well
-  }
+    // Send email with emailjs
+    emailjs
+      .send('your_service_id', 'your_template_id', emailParams, 'your_user_id')
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <div
