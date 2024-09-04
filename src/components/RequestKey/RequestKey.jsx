@@ -7,8 +7,18 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
   const [phoneValue, setPhoneValue] = useState('');
   const [companyValue, setCompanyValue] = useState('');
 
+  handleSubmit(e) {
+    e.preventDefault();
 
-  
+    //Generate API key
+    
+    //Send Request values to email
+
+    //Display API Key on page
+
+    // Email key to user on page as well
+  }
+
   return (
     <div
       className="p-6 bg-gray border-lg border-2 relative border-slate-800 md:border-slate-800 rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.25)] m-auto"
@@ -17,7 +27,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
       <p className="absolute top-[0] font-bold right-[10px] text-white cursor-pointer"
         onClick={closeForm}>x</p>
       <h1 className="font-bold text-white tracking-widest text-center">Request an API Key</h1>
-      <form className="max-w-md mx-auto text-left">
+      <form className="max-w-md mx-auto text-left" onSubmit={handleSubmit}>
         <div className="grid md:grid-cols-2 md:gap-6">
           <div className="relative z-0 w-full mb-5 group">
             <input
