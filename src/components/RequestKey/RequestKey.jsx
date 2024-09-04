@@ -6,6 +6,8 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
   const [emailValue, setEmailValue] = useState('');
   const [phoneValue, setPhoneValue] = useState('');
   const [companyValue, setCompanyValue] = useState('');
+
+
   
   return (
     <div
@@ -23,6 +25,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               name="first_name"
               id="first_name"
               value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
               className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
               placeholder=" "
               required
@@ -40,6 +43,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               name="last_name"
               id="last_name"
               value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
               placeholder=" "
               required
@@ -58,6 +62,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
             name="email"
             id="email"
             value={emailValue}
+            onChange={(e) => setEmailValue(e.target.value)}
             className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
             placeholder=" "
             required
@@ -77,9 +82,9 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               name="phone"
               id="phone"
               value={phoneValue}
+              onChange={(e) => setPhoneValue(e.target.value)}
               className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
               placeholder=" "
-              required
             />
             <label
               htmlFor="phone"
@@ -94,6 +99,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               name="company"
               id="company"
               value={companyValue}
+              onChange={(e) => setCompanyValue(e.target.value)}
               className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
               placeholder=" "
               required
