@@ -19,27 +19,27 @@ const Footer = () => {
                             </a>
                         </li>
                         <li className="px-5 py-2">
-                            <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                            <a href="#experience" className="text-base leading-6 text-gray-500 hover:text-gray-900">
                                 Experience
                             </a>
                         </li>
                         <li className="px-5 py-2">
-                            <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                            <a href="#resume" className="text-base leading-6 text-gray-500 hover:text-gray-900">
                                 Resume
                             </a>
                         </li>
                         <li className="px-5 py-2">
-                            <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                            <a href="#projects" className="text-base leading-6 text-gray-500 hover:text-gray-900">
                                 Examples
                             </a>
                         </li>
                         <li className="px-5 py-2">
-                            <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                            <a href="#quote" className="text-base leading-6 text-gray-500 hover:text-gray-900">
                                 Request a Quote
                             </a>
                         </li>
                         <li className="px-5 py-2">
-                            <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                            <a href="#contact" className="text-base leading-6 text-gray-500 hover:text-gray-900">
                                 Contact
                             </a>
                         </li>
