@@ -7,8 +7,10 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
   const [phoneValue, setPhoneValue] = useState('');
   const [companyValue, setCompanyValue] = useState('');
 
-  handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
+
+    console.log("submitted!");
 
     //Generate API key
     
@@ -44,7 +46,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               htmlFor="first_name"
               className="peer-focus:font-medium absolute text-sm dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              First name
+              First name <span className="text-green"> * </span>
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
@@ -62,7 +64,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               htmlFor="last_name"
               className="peer-focus:font-medium absolute text-sm dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Last name
+              Last name <span className="text-green"> * </span>
             </label>
           </div>
         </div>
@@ -81,14 +83,13 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
             htmlFor="email"
             className="peer-focus:font-medium absolute text-sm dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Email address
+            Email address <span className="text-green"> * </span>
           </label>
         </div>
         <div className="grid md:grid-cols-2 md:gap-6">
           <div className="relative z-0 w-full mb-5 group">
             <input
               type="tel"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               name="phone"
               id="phone"
               value={phoneValue}
@@ -100,7 +101,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               htmlFor="phone"
               className="peer-focus:font-medium absolute text-sm dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Phone number
+              Phone number (Optional)
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
@@ -118,11 +119,11 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               htmlFor="company"
               className="peer-focus:font-medium absolute text-sm dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Company
+              Company <span className="text-green"> * </span>
             </label>
           </div>
         </div>
-        <div className="text-right">
+        <div className="text-left">
           <button
             type="submit"
             className="text-white bg-slate-800 hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-slate-800 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
@@ -131,6 +132,10 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
           </button>
         </div>
       </form>
+
+      <div className="display-api hidden">
+          Your API key is {`${keyValue}`}: , check your email if you'd like to save it for later. Thank you for your interest in viewing my resume via an API request.
+      </div>
     </div>
   );
 };
