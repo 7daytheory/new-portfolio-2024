@@ -22,6 +22,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               type="text"
               name="first_name"
               id="first_name"
+              value={firstName}
               className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
               placeholder=" "
               required
@@ -38,6 +39,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               type="text"
               name="last_name"
               id="last_name"
+              value={lastName}
               className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
               placeholder=" "
               required
@@ -55,6 +57,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
             type="email"
             name="email"
             id="email"
+            value={emailValue}
             className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
             placeholder=" "
             required
@@ -73,6 +76,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               name="phone"
               id="phone"
+              value={phoneValue}
               className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
               placeholder=" "
               required
@@ -89,6 +93,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               type="text"
               name="company"
               id="company"
+              value={companyValue}
               className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
               placeholder=" "
               required
