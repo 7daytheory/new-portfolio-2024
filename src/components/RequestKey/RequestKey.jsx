@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const RequestKey = ({ wrapWidth, closeForm }) => {
   const [firstName , setFirstName] = useState('');
@@ -6,18 +9,39 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
   const [emailValue, setEmailValue] = useState('');
   const [phoneValue, setPhoneValue] = useState('');
   const [companyValue, setCompanyValue] = useState('');
+  const [keyValue, setKeyValue] = useState('');
 
-  handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    //Generate API key
-    
-    //Send Request values to email
+    // Generate API key
+    const generatedKey = 'ABC123XYZ'; // temporary key
+    setKeyValue(generatedKey);
 
-    //Display API Key on page
+    // Prepare the email parameters
+    const emailParams = {
+      firstName,
+      lastName,
+      email: emailValue,
+      phone: phoneValue,
+      company: companyValue,
+      apiKey: generatedKey, // create the apiKey
+    };
 
-    // Email key to user on page as well
-  }
+    // Send email with emailjs
+    emailjs
+      .send('your_service_id', 'your_template_id', emailParams, 'your_user_id')
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success('API key sent successfully to your email!');
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error('Failed to send the API key.');
+        }
+      );
+  };
 
   return (
     <div
@@ -36,7 +60,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               id="first_name"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
+              className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-left"
               placeholder=" "
               required
             />
@@ -44,7 +68,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               htmlFor="first_name"
               className="peer-focus:font-medium absolute text-sm dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              First name
+              First name <span className="text-slate-800"> * </span>
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
@@ -54,7 +78,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               id="last_name"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
+              className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-left"
               placeholder=" "
               required
             />
@@ -62,7 +86,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               htmlFor="last_name"
               className="peer-focus:font-medium absolute text-sm dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Last name
+              Last name <span className="text-slate-800"> * </span>
             </label>
           </div>
         </div>
@@ -73,7 +97,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
             id="email"
             value={emailValue}
             onChange={(e) => setEmailValue(e.target.value)}
-            className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
+            className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-left"
             placeholder=" "
             required
           />
@@ -81,26 +105,25 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
             htmlFor="email"
             className="peer-focus:font-medium absolute text-sm dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Email address
+            Email address <span className="text-slate-800"> * </span>
           </label>
         </div>
         <div className="grid md:grid-cols-2 md:gap-6">
           <div className="relative z-0 w-full mb-5 group">
             <input
               type="tel"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               name="phone"
               id="phone"
               value={phoneValue}
               onChange={(e) => setPhoneValue(e.target.value)}
-              className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
+              className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-left"
               placeholder=" "
             />
             <label
               htmlFor="phone"
               className="peer-focus:font-medium absolute text-sm dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Phone number
+              Phone number (Optional)
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
@@ -110,7 +133,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               id="company"
               value={companyValue}
               onChange={(e) => setCompanyValue(e.target.value)}
-              className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-center"
+              className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer text-left"
               placeholder=" "
               required
             />
@@ -118,19 +141,27 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
               htmlFor="company"
               className="peer-focus:font-medium absolute text-sm dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Company
+              Company <span className="text-slate-800"> * </span>
             </label>
           </div>
         </div>
-        <div className="text-right">
+        <div className="btn-wrap">
           <button
             type="submit"
-            className="text-white bg-slate-800 hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-slate-800 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
+            className="text-white bg-slate-800 hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-left dark:bg-slate-800 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
           >
             Submit
           </button>
         </div>
       </form>
+
+      {keyValue && (
+        <div className="display-api mt-4">
+          Your API key is {keyValue}. Check your email if you'd like to save it for later. Thank you for your interest in viewing my resume via an API request.
+        </div>
+      )}
+
+      <ToastContainer />
     </div>
   );
 };
