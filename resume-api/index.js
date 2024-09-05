@@ -71,9 +71,14 @@ const resume = {
   references: "George Nichols: Quillsoft CTO, Chad Stewart: Manager Quillsoft - Available upon request"
 };
 
-//full resume
+//Full resume
 app.get('/resume', (req, res) => {
   res.json(resume);
+});
+
+// Skills section
+app.get('/resume/skills', (req, res) => {
+  res.json(resume.skills);
 });
 
 // References
