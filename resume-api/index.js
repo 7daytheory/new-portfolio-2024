@@ -68,11 +68,17 @@ const resume = {
     "Collaborating with colleagues", 
     "Always learning"
   ],
-  references: "Available Upon Request"
+  references: "George Nichols: Quillsoft CTO, Chad Stewart: Manager Quillsoft - Available upon request"
 };
 
+//full resume
 app.get('/resume', (req, res) => {
   res.json(resume);
+});
+
+// References
+app.get('/resume/references', (req, res) => {
+  res.json(resume.references);
 });
 
 app.listen(port, () => {
