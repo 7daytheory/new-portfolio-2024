@@ -76,6 +76,11 @@ app.get('/resume', (req, res) => {
   res.json(resume);
 });
 
+// Overview section
+app.get('/resume/overview', (req, res) => {
+  res.json(resume.overview);
+});
+
 // Experiences section
 app.get('/resume/experiences', (req, res) => {
   res.json(resume.experiences);
