@@ -76,6 +76,11 @@ app.get('/resume', (req, res) => {
   res.json(resume);
 });
 
+// Experiences section
+app.get('/resume/experiences', (req, res) => {
+  res.json(resume.experiences);
+});
+
 // Skills section
 app.get('/resume/skills', (req, res) => {
   res.json(resume.skills);
