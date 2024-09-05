@@ -4,16 +4,16 @@ const app = express();
 const port = 3000;
 
 const resume = {
-  name: "Matthew Lowe",
-  title: "Software/Web Developer",
   contact: {
+    name: "Matthew Lowe",
+    title: "Software/Web Developer",
     phone: "(+1) 416 660 7973",
     email: "Matthewjlowe11@gmail.com",
     github: "https://github.com/7daytheory",
     portfolio: "https://www.matthewjlowe.com"
   },
-  overview: "Over 10 years of experience working on front and back end of projects. I am well versed in Git and doing code reviews, PRs, and more on GitHub. I have worked with JavaScript, PHP, MySQL, C++, SQL, APIs, and more. Worked on frameworks such as React & Angular as well as Laravel & Cake. I am able to work, learn, teach and articulate ideas well with others.",
-  experiences: [
+  overview: "I have 10 years of experience working in the industry working as a front-end and back-end developer, as well as database management and hosting. I have worked extensively in Javascript, PHP, MySQL and NoSQL databases, using and creating APIs, and many frameworks including React, Angular, JQuery, CakePHP, and Laravel. including frameworks like React and Angular. I have brought multiple projects from start to deployement stages with version control integrated. I am confident that I can be an asset to any company that requires a developer but I also try to always be learning more.",
+  experience: [
     {
       title: "Full Stack Developer",
       company_name: "ShipEarly",
@@ -59,6 +59,17 @@ const resume = {
       ]
     }
   ],
+  education: {
+    institution: "Fanshawe College",
+    years: "2008-2011",
+    degree: "Interactive Media & Development",
+    details: [
+      "The program at Fanshawe had 2 years of general graphic design, video editing, game design, and mainly web/app development courses.",
+      "In the 3rd year, I chose a specialty in web/app development but still have knowledge in the other areas that has been useful.",
+      "Did a project with Strategic Transitions Inc my final year in the program and was the only person hired; I was employed before I finished the program.",
+      "I also completed a year in a graphic design program but switched to web/app development as it aligned more with my career goals."
+    ]
+  },
   skills: [
     "Outgoing", 
     "Self-Driven", 
@@ -71,7 +82,7 @@ const resume = {
   references: "George Nichols: Quillsoft CTO, Chad Stewart: Manager Quillsoft - Available upon request"
 };
 
-//Full resume
+// Full resume
 app.get('/resume', (req, res) => {
   res.json(resume);
 });
@@ -81,9 +92,19 @@ app.get('/resume/overview', (req, res) => {
   res.json(resume.overview);
 });
 
-// Experiences section
-app.get('/resume/experiences', (req, res) => {
-  res.json(resume.experiences);
+// Personal Info section
+app.get('/resume/contact', (req, res) => {
+  res.json(resume.contact);
+});
+
+// Experience section
+app.get('/resume/experience', (req, res) => {
+  res.json(resume.experience);
+});
+
+// Education section
+app.get('/resume/education', (req, res) => {
+  res.json(resume.education);
 });
 
 // Skills section
