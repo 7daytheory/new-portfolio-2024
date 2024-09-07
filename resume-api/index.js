@@ -80,7 +80,7 @@ const resume = {
     "Collaborating with colleagues", 
     "Always learning"
   ],
-  references: "George xxxxxx: Quillsoft CTO, Chad xxxxxxx: Manager Quillsoft - Available upon request"
+  references: "George xxxxxx: Company CTO, Chad xxxxxxx: Manager - Available upon request"
 };
 
 // Full resume
