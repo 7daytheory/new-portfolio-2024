@@ -5,10 +5,11 @@ const port = 3000;
 
 const resume = {
   contact: {
-    name: "Matthew Lowe",
+    overview: "I have removed personal information from the web version of my resune. If you would like my full resume or contact info I'd be happpy to provide it upon request.",
+    name: "Matthew",
     title: "Software/Web Developer",
-    phone: "(+1) 416 660 7973",
-    email: "Matthewjlowe11@gmail.com",
+    phone: "Upon Request",
+    email: "Upon Request",
     github: "https://github.com/7daytheory",
     portfolio: "https://www.matthewjlowe.com"
   },
@@ -79,7 +80,7 @@ const resume = {
     "Collaborating with colleagues", 
     "Always learning"
   ],
-  references: "George Nichols: Quillsoft CTO, Chad Stewart: Manager Quillsoft - Available upon request"
+  references: "George xxxxxx: Quillsoft CTO, Chad xxxxxxx: Manager Quillsoft - Available upon request"
 };
 
 // Full resume

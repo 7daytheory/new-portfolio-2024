@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import apiLogo from '../../assets/api-logo.png'
 import pdfLogo from '../../assets/pdf-logo.png'
-import MyResume from '../../assets/resume.pdf'
+import MyResume from '../../assets/resumeWeb.pdf'
 import { Fade } from "react-awesome-reveal";
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import RequestKey from '../RequestKey/RequestKey';
