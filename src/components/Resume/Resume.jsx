@@ -40,6 +40,7 @@ import RequestKey from '../RequestKey/RequestKey';
         <Fade duration={3500} triggerOnce>
             <div className="text-slate-800 text-[3em] absolute ml-[10%] top-[-22px] font-bold">RESUME <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
+        <h2>** This Website/Portfolio is still in progress - just finishing off a few things and I do apologize if you get to my resume and check my website out before it's done. I will have it done within a day or two. **</h2>
         <Fade direction='top' duration={1000}>
             <h5 className="mb-2 mt-8 text-3xl font-bold text-gray-900 dark:text-white">Would you like a copy of my Resume?</h5>
         </Fade>
