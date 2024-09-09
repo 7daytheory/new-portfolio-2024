@@ -22,7 +22,12 @@ const Contact = () => {
             </form>
 
             <div class="flex-1">
-                <h1 class="text-gray-800 text-3xl font-extrabold">Let's Talk</h1>
+                <h1 class="text-gray-800 text-3xl font-extrabold">About Me</h1>
+                <p>I'm an experience application developer that has worked in the industry for 10 years. I have enjoyed working for companies where I am not stuck in a box. Some days I'm building a user facing front-end with Javascript/React and other days I'm porting over old C code to make a PWA. 
+                  I can also use some of my design talents to take the load off of our developers where I notice something that does not fit I can make a quick fix with css rather than having a whole desing process that takes valuable time.
+                </p>
+                <p>I also do things outside of working on the computer, or I do my best to. I am an avid football fan and I've been a rock climber since I was a teenager (on and off). I try to go every other day as a workout currently and I highly recommend it to anyone who needs to clear their head and needs to do something active.</p>
+                <h2>Here I am below, in my elements: </h2>
             </div>
         </div>
       </Fade>
