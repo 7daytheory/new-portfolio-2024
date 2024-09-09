@@ -2,18 +2,42 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  
-  console.log("Submitted!");
-}
  
 const Contact = () => {
   const [nameValue, setNameValue] = useState('');
   const [emailValue, setEmailValue] = useState('');
   const [subjectValue, setSubjectValue] = useState('');
   const [messageValue, setMessageValue] = useState('');
+
+  const FORM_KEY = import.meta.env.VITE_FORM_KEY;
+  const TEMPLATE_KEY = import.meta.env.VITE_TEMPLATE_KEY;
+  const SERVICE_KEY = import.meta.env.VITE_SERVICE_KEY;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    //Email Params
+    const emailParams = {
+      name: nameValue,
+      email: emailValue,
+      subject: subjectValue,
+      message: messageValue,
+    };
+  
+    // Send email with emailjs
+    emailjs
+    .send(FORM_KEY, TEMPLATE_KEY, emailParams, SERVICE_KEY)
+    .then(
+      (result) => {
+        console.log(result.text);
+        toast.success('API key sent successfully to your email!');
+      },
+      (error) => {
+        console.log(error.text);
+        toast.error('Failed to send the API key.');
+      }
+    );
+  }
 
   return (
     <div className="relative w-full p-4 sm:p-8 dark:bg-red-800">

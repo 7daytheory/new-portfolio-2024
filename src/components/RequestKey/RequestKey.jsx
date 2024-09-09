@@ -15,17 +15,17 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
     e.preventDefault();
 
     // Generate API key
-    const generatedKey = 'ABC123XYZ'; // temporary key
+    const generatedKey = generateKey() // Generate key(default 12 chars)
     setKeyValue(generatedKey);
 
-    // Prepare the email parameters
+    //email params
     const emailParams = {
       firstName,
       lastName,
       email: emailValue,
       phone: phoneValue,
       company: companyValue,
-      apiKey: generatedKey, // create the apiKey
+      apiKey: generatedKey,
     };
 
     // Send email with emailjs
