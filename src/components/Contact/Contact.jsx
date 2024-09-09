@@ -1,43 +1,60 @@
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
+const handleSubmit = (e) => {
+  e.preventDefault();
+  
+  console.log("Submitted!");
+}
+ 
 const Contact = () => {
+  const [nameValue, setFullValue] = useState('');
+  const [emailValue, setEmailValue] = useState('');
+  const [subjectValue, setSubjectValue] = useState('');
+  const [messageValue, setMessageValue] = useState('');
+
   return (
     <div className="relative w-full p-4 sm:p-8 dark:bg-red-800">
-      <Fade duration={3500} triggerOnce>
-            <div className="text-white text-[3em] absolute ml-[2%] top-[-22px] font-bold">ASK ME SOMETHING <FontAwesomeIcon icon={faArrowDown} /></div>
+      <Fade duration={2500}>
+            <div className="text-white text-[3em] absolute ml-[2%] top-[-22px] font-bold" id="contact">GET IN TOUCH <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
       <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-md font-[sans-serif]">
         <div className="flex-1 space-y-4">
-          <Fade cascade duration={750} direction='left' triggerOnce>
-          <input 
-            type='text' 
-            placeholder='Name' 
-            className="w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm shadow" 
-          />
-          <input 
-            type='email' 
-            placeholder='Email' 
-            className="w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm shadow" 
-          />
-          <input 
-            type='text' 
-            placeholder='Subject' 
-            className="w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm shadow" 
-          />
-          <textarea 
-            placeholder='Message' 
-            rows="6" 
-            className="w-full text-gray-800 rounded-md px-4 border text-sm pt-2.5 shadow"
-          />
-          <button 
-            type='button' 
-            className="text-white bg-slate-800 hover:bg-slate-700 align-right w-[25%] rounded-md text-sm shadow px-4 py-3 w-full !mt-6">
-            Send
-          </button>
-          </Fade>
+          <form onSubmit={handleSubmit} className='bg-slate-800 p-4 shadow'>
+            <Fade cascade duration={750} direction='left' triggerOnce>
+            <input 
+              type='text'
+              value={nameValue}
+              placeholder='Name'
+              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+            />
+            <input 
+              type='email'
+              value={emailValue}
+              placeholder='Email'
+              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+            />
+            <input 
+              type='text'
+              value={subjectValue}
+              placeholder='Subject'
+              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+            />
+            <textarea 
+              placeholder='Message'
+              value={messageValue}
+              rows="6"
+              className="w-full text-gray-800 rounded-md px-4 mb-4 border text-sm pt-2.5 shadow"
+            />
+            <button
+              type='button'
+              className="text-white bg-red-800 hover:bg-red-700 align-right w-[25%] rounded-md text-sm shadow px-4 py-3 w-full !mt-6">
+              Send
+            </button>
+            </Fade>
+          </form>
         </div>
 
         <div className="flex-1">
