@@ -11,26 +11,42 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
   const [companyValue, setCompanyValue] = useState('');
   const [keyValue, setKeyValue] = useState('');
 
+  const FORM_KEY = import.meta.env.VITE_FORM_KEY;
+  const TEMPLATE_KEY = import.meta.env.VITE_TEMPLATE_KEY;
+  const SERVICE_KEY = import.meta.env.VITE_SERVICE_KEY;
+
+  const generateKey = (length = 12) => {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Generate API key
-    const generatedKey = 'ABC123XYZ'; // temporary key
+    const generatedKey = generateKey()
     setKeyValue(generatedKey);
 
-    // Prepare the email parameters
+    //email params
     const emailParams = {
       firstName,
       lastName,
       email: emailValue,
       phone: phoneValue,
       company: companyValue,
-      apiKey: generatedKey, // create the apiKey
+      apiKey: generatedKey,
     };
 
     // Send email with emailjs
     emailjs
-      .send('your_service_id', 'your_template_id', emailParams, 'your_user_id')
+    .send(FORM_KEY, TEMPLATE_KEY, emailParams, SERVICE_KEY)
       .then(
         (result) => {
           console.log(result.text);

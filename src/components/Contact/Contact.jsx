@@ -1,43 +1,88 @@
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
-
+ 
 const Contact = () => {
+  const [nameValue, setNameValue] = useState('');
+  const [emailValue, setEmailValue] = useState('');
+  const [subjectValue, setSubjectValue] = useState('');
+  const [messageValue, setMessageValue] = useState('');
+
+  const FORM_KEY = import.meta.env.VITE_FORM_KEY;
+  const TEMPLATE_KEY = import.meta.env.VITE_TEMPLATE_KEY;
+  const SERVICE_KEY = import.meta.env.VITE_SERVICE_KEY;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    //Email Params
+    const emailParams = {
+      name: nameValue,
+      email: emailValue,
+      subject: subjectValue,
+      message: messageValue,
+    };
+  
+    // Send email with emailjs
+    emailjs
+    .send(FORM_KEY, TEMPLATE_KEY, emailParams, SERVICE_KEY)
+    .then(
+      (result) => {
+        console.log(result.text);
+        toast.success('API key sent successfully to your email!');
+      },
+      (error) => {
+        console.log(error.text);
+        toast.error('Failed to send the API key.');
+      }
+    );
+  }
+
   return (
     <div className="relative w-full p-4 sm:p-8 dark:bg-red-800">
-      <Fade duration={3500} triggerOnce>
-            <div className="text-white text-[3em] absolute ml-[2%] top-[-22px] font-bold">ASK ME SOMETHING <FontAwesomeIcon icon={faArrowDown} /></div>
+      <Fade duration={2500}>
+            <div className="text-white text-[3em] absolute ml-[2%] top-[-22px] font-bold" id="contact">GET IN TOUCH <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
       <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-md font-[sans-serif]">
         <div className="flex-1 space-y-4">
-          <Fade cascade duration={750} direction='left' triggerOnce>
-          <input 
-            type='text' 
-            placeholder='Name' 
-            className="w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm shadow" 
-          />
-          <input 
-            type='email' 
-            placeholder='Email' 
-            className="w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm shadow" 
-          />
-          <input 
-            type='text' 
-            placeholder='Subject' 
-            className="w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm shadow" 
-          />
-          <textarea 
-            placeholder='Message' 
-            rows="6" 
-            className="w-full text-gray-800 rounded-md px-4 border text-sm pt-2.5 shadow"
-          />
-          <button 
-            type='button' 
-            className="text-white bg-slate-800 hover:bg-slate-700 align-right w-[25%] rounded-md text-sm shadow px-4 py-3 w-full !mt-6">
-            Send
-          </button>
-          </Fade>
+          <form onSubmit={handleSubmit} className='bg-slate-800 p-4 shadow'>
+            <Fade cascade duration={750} direction='left' triggerOnce>
+            <input 
+              type='text'
+              value={nameValue}
+              onChange={(e) => setNameValue(e.target.value)}
+              placeholder='Name'
+              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+            />
+            <input 
+              type='email'
+              value={emailValue}
+              onChange={(e) => setEmailValue(e.target.value)}
+              placeholder='Email'
+              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+            />
+            <input 
+              type='text'
+              value={subjectValue}
+              onChange={(e) => setSubjectValue(e.target.value)}
+              placeholder='Subject'
+              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+            />
+            <textarea 
+              placeholder='Message'
+              value={messageValue}
+              onChange={(e) => setMessageValue(e.target.value)}
+              rows="6"
+              className="w-full text-gray-800 rounded-md px-4 mb-4 border text-sm pt-2.5 shadow"
+            />
+            <button
+              type='button'
+              className="text-white bg-red-800 hover:bg-red-700 align-right w-[25%] rounded-md text-sm shadow px-4 py-3 w-full !mt-6">
+              Send Message
+            </button>
+            </Fade>
+          </form>
         </div>
 
         <div className="flex-1">
