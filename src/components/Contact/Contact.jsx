@@ -10,7 +10,7 @@ const handleSubmit = (e) => {
 }
  
 const Contact = () => {
-  const [nameValue, setFullValue] = useState('');
+  const [nameValue, setNameValue] = useState('');
   const [emailValue, setEmailValue] = useState('');
   const [subjectValue, setSubjectValue] = useState('');
   const [messageValue, setMessageValue] = useState('');
@@ -27,31 +27,35 @@ const Contact = () => {
             <input 
               type='text'
               value={nameValue}
+              onChange={(e) => setNameValue(e.target.value)}
               placeholder='Name'
               className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
             />
             <input 
               type='email'
               value={emailValue}
+              onChange={(e) => setEmailValue(e.target.value)}
               placeholder='Email'
               className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
             />
             <input 
               type='text'
               value={subjectValue}
+              onChange={(e) => setSubjectValue(e.target.value)}
               placeholder='Subject'
               className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
             />
             <textarea 
               placeholder='Message'
               value={messageValue}
+              onChange={(e) => setMessageValue(e.target.value)}
               rows="6"
               className="w-full text-gray-800 rounded-md px-4 mb-4 border text-sm pt-2.5 shadow"
             />
             <button
               type='button'
               className="text-white bg-red-800 hover:bg-red-700 align-right w-[25%] rounded-md text-sm shadow px-4 py-3 w-full !mt-6">
-              Send
+              Send Message
             </button>
             </Fade>
           </form>
