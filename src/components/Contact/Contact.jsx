@@ -2,6 +2,8 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import emailjs from 'emailjs-com';
+import { toast } from 'react-toastify';
  
 const Contact = () => {
   const [nameValue, setNameValue] = useState('');
@@ -15,6 +17,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    console.log("Test!")
   
     //Email Params
     const emailParams = {
@@ -46,7 +50,7 @@ const Contact = () => {
         </Fade>
       <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-md font-[sans-serif]">
         <div className="flex-1 space-y-4">
-          <form onSubmit={handleSubmit} className='bg-slate-800 p-4 shadow'>
+          <form className='bg-slate-800 p-4 shadow' onSubmit={handleSubmit}>
             <Fade cascade duration={750} direction='left' triggerOnce>
             <input 
               type='text'
@@ -77,12 +81,12 @@ const Contact = () => {
               className="w-full text-gray-800 rounded-md px-4 mb-4 border text-sm pt-2.5 shadow"
             />
             <button
-              type='button'
+              type='submit'
               className="text-white bg-red-800 hover:bg-red-700 align-right w-[25%] rounded-md text-sm shadow px-4 py-3 w-full !mt-6">
               Send Message
             </button>
             </Fade>
-          </form>
+            </form>
         </div>
 
         <div className="flex-1">
