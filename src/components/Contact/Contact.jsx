@@ -42,9 +42,9 @@ const Contact = () => {
   }
 
   return (
-    <div className="relative w-full p-4 sm:p-8 dark:bg-red-800">
+    <div className="relative w-full p-4 sm:p-8 bg-white">
       <Fade duration={2500}>
-            <div className="text-white text-[3em] absolute ml-[2%] top-[-22px] font-bold" id="contact">GET IN TOUCH <FontAwesomeIcon icon={faArrowDown} /></div>
+            <div className="text-red-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold" id="contact">CONTACT ME <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
       <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-md font-[sans-serif]">
         <div className="flex-1 space-y-4">
@@ -89,10 +89,10 @@ const Contact = () => {
 
         <div className="flex-1">
           <Fade duration={1250} delay={2000} direction='up' triggerOnce>
-            <h1 className="text-4xl font-extrabold text-slate-800 mb-8">About Me</h1>
+            <h1 className="text-4xl font-extrabold text-red-800 mb-8">About Me</h1>
           </Fade>
           <Fade duration={750} delay={2500} direction='up' cascade triggerOnce>
-            <div className='text-white text-sm'>
+            <div className='text-slate-800 text-sm'>
               <p>I'm an experienced application developer that has worked in the industry for 10 years. I have enjoyed working for companies where I am not stuck in a box. Some days I'm building a user-facing front-end with Javascript/React, and other days I'm porting over old C code to make a PWA.</p>
               <p>I can also use some of my design talents to take the load off our developers where I notice something that does not fit. I can make a quick fix with CSS rather than having a whole design process that takes valuable time.</p>
               <p>I also do things outside of working on the computer, or I do my best to. I am an avid football fan and I've been a rock climber since I was a teenager (on and off). I try to go every other day as a workout currently, and I highly recommend it to anyone who needs to clear their head and do something active.</p>
