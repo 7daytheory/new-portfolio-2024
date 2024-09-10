@@ -11,8 +11,8 @@ const Contact = () => {
   const [subjectValue, setSubjectValue] = useState('');
   const [messageValue, setMessageValue] = useState('');
 
-  const FORM_KEY = import.meta.env.VITE_FORM_KEY;
-  const TEMPLATE_KEY = import.meta.env.VITE_TEMPLATE_KEY;
+  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+  const TEMPLATE_KEY = import.meta.env.VITE_TEMPLATE_CONTACT_KEY;
   const SERVICE_KEY = import.meta.env.VITE_SERVICE_KEY;
 
   const handleSubmit = (e) => {
@@ -28,15 +28,15 @@ const Contact = () => {
   
     // Send email with emailjs
     emailjs
-    .send(SERVICE_KEY, TEMPLATE_KEY, emailParams, FORM_KEY)
+    .send(SERVICE_KEY, TEMPLATE_KEY, emailParams, PUBLIC_KEY)
     .then(
       (result) => {
         console.log(result.text);
-        toast.success('API key sent successfully to your email!');
+        toast.success('Success! Please check your email.');
       },
       (error) => {
         console.log(error.text);
-        toast.error('Failed to send the API key.');
+        toast.error('Error! Please try again.');
       }
     );
   }

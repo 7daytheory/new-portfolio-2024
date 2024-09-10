@@ -11,8 +11,8 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
   const [companyValue, setCompanyValue] = useState('');
   const [keyValue, setKeyValue] = useState('');
 
-  const FORM_KEY = import.meta.env.VITE_FORM_KEY;
-  const TEMPLATE_KEY = import.meta.env.VITE_TEMPLATE_KEY;
+  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+  const TEMPLATE_KEY = import.meta.env.VITE_TEMPLATE_API_KEY;
   const SERVICE_KEY = import.meta.env.VITE_SERVICE_KEY;
 
   const generateKey = (length = 12) => {
@@ -36,8 +36,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
 
     //email params
     const emailParams = {
-      firstName,
-      lastName,
+      name: firstName + ' ' + lastName,
       email: emailValue,
       phone: phoneValue,
       company: companyValue,
@@ -46,7 +45,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
 
     // Send email with emailjs
     emailjs
-    .send(FORM_KEY, TEMPLATE_KEY, emailParams, SERVICE_KEY)
+    .send(SERVICE_KEY, TEMPLATE_KEY, emailParams, PUBLIC_KEY)
       .then(
         (result) => {
           console.log(result.text);
