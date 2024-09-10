@@ -17,12 +17,10 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log("Test!")
   
     //Email Params
     const emailParams = {
-      name: nameValue,
+      from_name: nameValue,
       email: emailValue,
       subject: subjectValue,
       message: messageValue,
@@ -30,7 +28,7 @@ const Contact = () => {
   
     // Send email with emailjs
     emailjs
-    .send(FORM_KEY, TEMPLATE_KEY, emailParams, SERVICE_KEY)
+    .send(SERVICE_KEY, TEMPLATE_KEY, emailParams, FORM_KEY)
     .then(
       (result) => {
         console.log(result.text);
@@ -56,14 +54,14 @@ const Contact = () => {
               type='text'
               value={nameValue}
               onChange={(e) => setNameValue(e.target.value)}
-              placeholder='Name'
+              placeholder='Full Name'
               className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
             />
             <input 
               type='email'
               value={emailValue}
               onChange={(e) => setEmailValue(e.target.value)}
-              placeholder='Email'
+              placeholder='example@gmail.com'
               className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
             />
             <input 
@@ -74,7 +72,7 @@ const Contact = () => {
               className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
             />
             <textarea 
-              placeholder='Message'
+              placeholder='Please let me know how I can help.'
               value={messageValue}
               onChange={(e) => setMessageValue(e.target.value)}
               rows="6"

@@ -40,12 +40,11 @@ import RequestKey from '../RequestKey/RequestKey';
         <Fade duration={3500} triggerOnce>
             <div className="text-slate-800 text-[3em] absolute ml-[10%] top-[-22px] font-bold">RESUME <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
-        <h2>** This Website/Portfolio is still in progress - just finishing off a few things and I do apologize if you get to my resume and check my website out before it's done. I will have it done within a day or two. **</h2>
         <Fade direction='top' duration={1000}>
             <h5 className="mb-2 mt-8 text-3xl font-bold text-gray-900 dark:text-white">Would you like a copy of my Resume?</h5>
         </Fade>
         <Fade direction='bottom' duration={2000}>
-            <p className="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-100">You can download a PDF version or you can request an API key and get it with a request.</p>
+            <p className="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-100">You can download a PDF version or you can request an API key and receive it with a POST request.</p>
         </Fade>
         <div className="m-auto items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse mb-8">
             <div id="btnWidth" ref={wrapRef} className="md:inline-flex md:space-x-4">
