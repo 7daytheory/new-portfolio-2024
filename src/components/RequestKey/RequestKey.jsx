@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Fade } from 'react-awesome-reveal';
 
 const RequestKey = ({ wrapWidth, closeForm }) => {
   const [firstName , setFirstName] = useState('');
@@ -64,8 +63,6 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
       className="p-6 relative border-slate-800 md:border-slate-800 rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.25)] m-auto"
       style={{ width: `${wrapWidth}px` }}
     >
-      <p className="absolute top-[0] font-bold right-[10px] text-white cursor-pointer"
-        onClick={closeForm}>x</p>
       <h1 className="font-bold text-white tracking-widest text-center">Request an API Key</h1>
       <div class="relative py-3 sm:max-w-xl sm:mx-auto">
         <div class="absolute inset-0 bg-red-800 border-white border-2 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
@@ -76,8 +73,9 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
             </div>
             <div class="divide-y divide-gray-200">
               <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                <form class="max-w-md mx-auto text-left" onSubmit={handleSubmit}>
-                  <div class="relative mb-6 pointer">
+              <p className="absolute top-[5px] font-bold right-[15px] text-red-800 cursor-pointer text-lg" onClick={closeForm}>x</p>
+                <form class="max-w-md mx-auto text-left relative" onSubmit={handleSubmit}>
+                  <div class="relative mb-6">
                     <input
                       autocomplete="off"
                       id="first_name"
@@ -85,7 +83,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
                       type="text"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
-                      class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-red-600"
+                      class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-red-800"
                       placeholder="First Name"
                       required
                     />
@@ -95,7 +93,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
                     >First Name</label>
                   </div>
 
-                  <div class="relative mb-6 pointer">
+                  <div class="relative mb-6 ">
                     <input
                       autocomplete="off"
                       id="last_name"
@@ -103,7 +101,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
                       type="text"
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
-                      class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-red-600"
+                      class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-red-800"
                       placeholder="Last Name"
                       required
                     />
@@ -113,7 +111,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
                     >Last Name</label>
                   </div>
 
-                  <div class="relative mb-6 pointer">
+                  <div class="relative mb-6 ">
                     <input
                       autocomplete="off"
                       id="email"
@@ -121,7 +119,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
                       type="email"
                       value={emailValue}
                       onChange={(e) => setEmailValue(e.target.value)}
-                      class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-red-600"
+                      class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-red-800"
                       placeholder="Email Address"
                       required
                     />
@@ -131,7 +129,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
                     >Email Address</label>
                   </div>
 
-                  <div class="relative mb-6 pointer">
+                  <div class="relative mb-6 ">
                     <input
                       autocomplete="off"
                       id="phone"
@@ -139,7 +137,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
                       type="tel"
                       value={phoneValue}
                       onChange={(e) => setPhoneValue(e.target.value)}
-                      class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-red-600"
+                      class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-red-800"
                       placeholder="Phone (Optional)"
                     />
                     <label
@@ -148,7 +146,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
                     >Phone (Optional)</label>
                   </div>
 
-                  <div class="relative mb-6 pointer">
+                  <div class="relative mb-6 ">
                     <input
                       autocomplete="off"
                       id="company"
@@ -156,7 +154,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
                       type="text"
                       value={companyValue}
                       onChange={(e) => setCompanyValue(e.target.value)}
-                      class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-red-600"
+                      class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-red-800"
                       placeholder="Company"
                       required
                     />
@@ -166,8 +164,8 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
                     >Company</label>
                   </div>
 
-                  <div class="relative mb-6 pointer flex justify-end">
-                    <button class="bg-slate-800 hover:bg-slate-700 text-white rounded-md px-4 py-2">Submit</button>
+                  <div class="relative mb-6 cursor-pointer flex justify-end">
+                    <button class="bg-slate-800 hover:bg-slate-600 text-white rounded-md px-4 py-2">Submit</button>
                   </div>
                 </form>
               </div>
