@@ -37,7 +37,7 @@ import RequestKey from '../RequestKey/RequestKey';
 
     return (
     <div id="resume" className="relative w-full p-4 text-center bg-white shadow sm:p-8">
-        <Fade duration={3500} triggerOnce>
+        <Fade duration={3500}>
             <div className="text-slate-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold">RESUME <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
         <Fade direction='top' duration={1000}>

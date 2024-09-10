@@ -8,8 +8,9 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 const Projects = () => {
   return (
       <div id="projects" className="relative w-full p-4 text-center bg-red-800 sm:p-8">
-        <Fade duration={2000} triggerOnce> 
+          <Fade duration={2000}> 
             <div className="text-white text-[3em] absolute ml-[5%] top-[-23px] font-bold">PROJECTS <FontAwesomeIcon icon={faArrowDown} /></div>
+          </Fade>
             <div className="flex justify-center space-x-4 mt-12">
             <Fade duration={750} direction='right' cascade triggerOnce>
               <ProjectCard />
@@ -17,7 +18,6 @@ const Projects = () => {
               <ProjectCard />
             </Fade>
           </div>
-        </Fade>
       </div>
   ) 
 }
