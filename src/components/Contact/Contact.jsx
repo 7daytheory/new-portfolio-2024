@@ -20,7 +20,7 @@ const Contact = () => {
   
     //Email Params
     const emailParams = {
-      from_name: nameValue,
+      name: nameValue,
       email: emailValue,
       subject: subjectValue,
       message: messageValue,
