@@ -49,7 +49,6 @@ const Contact = () => {
       <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-md font-[sans-serif]">
         <div className="flex-1 space-y-4">
           <form className='bg-slate-800 p-4 shadow' onSubmit={handleSubmit}>
-            <Fade cascade duration={750} direction='left' triggerOnce>
             <input 
               type='text'
               value={nameValue}
@@ -83,15 +82,14 @@ const Contact = () => {
               className="text-white bg-red-800 hover:bg-red-700 align-right w-[25%] rounded-md text-sm shadow px-4 py-3 w-full !mt-6">
               Send Message
             </button>
-            </Fade>
             </form>
         </div>
 
         <div className="flex-1">
-          <Fade duration={1250} delay={2000} direction='up' triggerOnce>
+          <Fade duration={1000} delay={1000} direction='up' triggerOnce>
             <h1 className="text-4xl font-extrabold text-red-800 mb-8">About Me</h1>
           </Fade>
-          <Fade duration={750} delay={2500} direction='up' cascade triggerOnce>
+          <Fade duration={1000} delay={1500} direction='up' cascade triggerOnce>
           <div className='text-slate-800 text-sm'>
             <p>I'm an experienced application developer with 10 years in the industry. I enjoy roles where I'm not confined to the same thing daily, some days I'm building user-facing front-end pages with JavaScript/React, other days I'm porting old C code to create PWAs.</p>
             <p>My design skills also come in handy. I can quickly tweak CSS to solve design issues without needing a lengthy process, saving time for everyone.</p>
