@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
+import ClimbingPhoto from '../../assets/climbing-photo.jpg';
  
 const Contact = () => {
   const [nameValue, setNameValue] = useState('');
@@ -46,56 +47,59 @@ const Contact = () => {
       <Fade duration={2500}>
             <div className="text-red-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold" id="contact">CONTACT ME <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
-      <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-md font-[sans-serif]">
+      <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-lg font-[sans-serif]">
         <div className="flex-1 space-y-4">
           <form className='bg-slate-800 p-4 shadow' onSubmit={handleSubmit}>
-            <Fade cascade duration={750} direction='left' triggerOnce>
             <input 
               type='text'
               value={nameValue}
               onChange={(e) => setNameValue(e.target.value)}
               placeholder='Full Name'
-              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[2.5%]"
             />
             <input 
               type='email'
               value={emailValue}
               onChange={(e) => setEmailValue(e.target.value)}
               placeholder='example@gmail.com'
-              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[2.5%]"
             />
             <input 
               type='text'
               value={subjectValue}
               onChange={(e) => setSubjectValue(e.target.value)}
               placeholder='Subject'
-              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[2.5%]"
             />
             <textarea 
               placeholder='Please let me know how I can help.'
               value={messageValue}
               onChange={(e) => setMessageValue(e.target.value)}
               rows="6"
-              className="w-full text-gray-800 rounded-md px-4 mb-4 border text-sm pt-2.5 shadow"
+              className="w-full text-slate-800 rounded-md px-4 mt-4 border text-sm pt-2.5 shadow w-[95%] ml-[2.5%]"
             />
-            <button
-              type='submit'
-              className="text-white bg-red-800 hover:bg-red-700 align-right w-[25%] rounded-md text-sm shadow px-4 py-3 w-full !mt-6">
-              Send Message
-            </button>
-            </Fade>
+            <div className="flex justify-end">
+              <button
+                type='submit'
+                className="text-white bg-red-800 hover:bg-red-700 w-[25%] rounded-md text-sm shadow px-4 py-3 mt-4 mr-4">
+                Send Message
+              </button>
+            </div>
             </form>
         </div>
 
         <div className="flex-1">
-          <Fade duration={1250} delay={2000} direction='up' triggerOnce>
-            <h1 className="text-4xl font-extrabold text-red-800 mb-8">About Me</h1>
+          <Fade duration={1000} delay={1000} direction='up' triggerOnce>
+            <h1 className="text-4xl font-bold text-red-800 mb-2">About Me</h1>
           </Fade>
-          <Fade duration={750} delay={2500} direction='up' cascade triggerOnce>
+          <Fade duration={1000} delay={1500} direction='up' cascade triggerOnce>
           <div className='text-slate-800 text-sm'>
             <p>I'm an experienced application developer with 10 years in the industry. I enjoy roles where I'm not confined to the same thing daily, some days I'm building user-facing front-end pages with JavaScript/React, other days I'm porting old C code to create PWAs.</p>
             <p>My design skills also come in handy. I can quickly tweak CSS to solve design issues without needing a lengthy process, saving time for everyone.</p>
-            <p>Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
+            <div className="p-2 border border-2 border-white w-[75%] rounded-lg shadow-lg flex m-auto">
+              <img src={ClimbingPhoto} alt="Matthew Lowe Climbing" className="h-auto border-red-800 border-2 border justify-center"></img>
+            </div>
+            <p className="mt-2">Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
           </div>
           </Fade>
         </div>
