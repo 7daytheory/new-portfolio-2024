@@ -50,7 +50,7 @@ const experiences = [
   ];
 
 //Projects Section
-const projects = {
+const allProjects = {
   display: true,
   projects: [
     {
@@ -79,5 +79,5 @@ const projects = {
 
 export {
     experiences,
-    projects
+    allProjects
 };

@@ -1,14 +1,31 @@
-import React from 'react'
 
-const ProjectCard = () => {
+import React from "react";
+
+const ProjectCard = ({cardInfo}) => {
     return (
-      <div className="flex justify-center space-x-4">
-        <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-        </a>
+      <div className="projects-card">
+        <div className="projects-banner">
+          <div className="projects-div-company">
+            <h5 className="projects-text-company">{cardInfo.projectName}</h5>
+          </div>
+        </div>
+        <div className="projects-text-details">
+          <h5
+            className="projects-text-role"
+          >
+            {cardInfo.projectType}
+          </h5>
+          <p
+            className="subTitle projects-text-desc"
+          >
+            {cardInfo.projectDesc}
+          </p>
+          <div class='projectBtn_wrap'>
+            <a href={cardInfo.link} class='projectsBtn' target='_blank' rel='noreferrer'>View Demo</a>
+          </div>
+        </div>
       </div>
-    )
+    );
   }
-  
+
   export default ProjectCard

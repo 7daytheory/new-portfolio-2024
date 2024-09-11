@@ -4,6 +4,7 @@ import { Fade } from "react-awesome-reveal";
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ProjectCard from '../ProjectCard/ProjectCard';
+import { allProjects } from '../../content';
 
 const Projects = () => {
   return (
@@ -13,9 +14,20 @@ const Projects = () => {
           </Fade>
             <div className="flex justify-center space-x-4 mt-12">
             <Fade duration={750} direction='right' cascade triggerOnce>
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+            {allProjects.projects.map((card, i) => {
+                  return (
+                    <ProjectCard
+                      key={i}
+                      cardInfo={{
+                        projectName: card.projectName,
+                        projectDesc: card.projectDesc,
+                        projectType: card.projectType,
+                        link: card.projectLink,
+                        projectImage: card.projectImage
+                      }}
+                    />
+                  );
+                })}
             </Fade>
           </div>
       </div>
