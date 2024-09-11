@@ -49,6 +49,35 @@ const experiences = [
     },
   ];
 
+//Projects Section
+const allProjects = {
+  display: true,
+  projects: [
+    {
+      projectName: "Hang Your Banner",
+      projectDesc: "A tool that allows you to create your own championship banners for teams that don't have real ones.",
+      projectType: "React, Javascript, HTML, CSS",
+      projectLink: "http://www.hangyourbanner.com",
+      projectImage: null
+    },
+	  {
+      projectName: "Kings",
+      projectDesc: "Created a PWA that was available in app store. I took it down but you can still download it as a PWA.",
+      projectType: "Javascript, JQuery, HTML, CSS3",
+      projectLink: "kings/index.html",
+      projectImage: null
+    },
+    {
+      projectName: "Quiz Game",
+      projectDesc: "Quiz game that uses an API to fetch questions and keeps score.",
+      projectType: "Javascript, HTML, CSS3, localstorage",
+      projectLink: "quiz/index.html",
+      projectImage: null
+    },
+  ]
+};
+
 export {
     experiences,
+    allProjects
 };
