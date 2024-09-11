@@ -55,28 +55,28 @@ const Contact = () => {
               value={nameValue}
               onChange={(e) => setNameValue(e.target.value)}
               placeholder='Full Name'
-              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[2.5%]"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[3%]"
             />
             <input 
               type='email'
               value={emailValue}
               onChange={(e) => setEmailValue(e.target.value)}
               placeholder='example@gmail.com'
-              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[2.5%]"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[3%]"
             />
             <input 
               type='text'
               value={subjectValue}
               onChange={(e) => setSubjectValue(e.target.value)}
               placeholder='Subject'
-              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[2.5%]"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[3%]"
             />
             <textarea 
               placeholder='Please let me know how I can help.'
               value={messageValue}
               onChange={(e) => setMessageValue(e.target.value)}
               rows="6"
-              className="w-full text-slate-800 rounded-md px-4 mt-4 border text-sm pt-2.5 shadow w-[95%] ml-[2.5%]"
+              className="w-full text-slate-800 rounded-md px-4 mt-4 border text-sm pt-2.5 shadow w-[95%] ml-[3%]"
             />
             <div className="flex justify-end">
               <button
