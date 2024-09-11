@@ -92,11 +92,11 @@ const Contact = () => {
             <h1 className="text-4xl font-extrabold text-red-800 mb-8">About Me</h1>
           </Fade>
           <Fade duration={750} delay={2500} direction='up' cascade triggerOnce>
-            <div className='text-slate-800 text-sm'>
-              <p>I'm an experienced application developer that has worked in the industry for 10 years. I have enjoyed working for companies where I am not stuck in a box. Some days I'm building a user-facing front-end with Javascript/React, and other days I'm porting over old C code to make a PWA.</p>
-              <p>I can also use some of my design talents to take the load off our developers where I notice something that does not fit. I can make a quick fix with CSS rather than having a whole design process that takes valuable time.</p>
-              <p>I also do things outside of working on the computer, or I do my best to. I am an avid football fan and I've been a rock climber since I was a teenager (on and off). I try to go every other day as a workout currently, and I highly recommend it to anyone who needs to clear their head and do something active.</p>
-            </div>
+          <div className='text-slate-800 text-sm'>
+            <p>I'm an experienced application developer with 10 years in the industry. I enjoy roles where I'm not confined to the same thing daily, some days I'm building user-facing front-end pages with JavaScript/React, other days I'm porting old C code to create PWAs.</p>
+            <p>My design skills also come in handy. I can quickly tweak CSS to solve design issues without needing a lengthy process, saving time for everyone.</p>
+            <p>Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
+          </div>
           </Fade>
         </div>
       </div>

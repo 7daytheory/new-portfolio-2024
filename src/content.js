@@ -49,13 +49,13 @@ const experiences = [
     },
   ];
 
-  // Side projects Section
+//Projects Section
 const projects = {
-  display: true, // Set false to hide this section, defaults to true
+  display: true,
   projects: [
     {
       projectName: "Hang Your Banner",
-      projectDesc: "A tool that allows you to create you own championship banners for teams that don't have real ones.",
+      projectDesc: "A tool that allows you to create your own championship banners for teams that don't have real ones.",
       projectType: "React, Javascript, HTML, CSS",
       projectLink: "www.hangyourbanner.com",
       projectImage: null
