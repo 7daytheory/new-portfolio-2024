@@ -46,7 +46,7 @@ const Contact = () => {
       <Fade duration={2500}>
             <div className="text-red-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold" id="contact">CONTACT ME <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
-      <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-md font-[sans-serif]">
+      <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-lg font-[sans-serif]">
         <div className="flex-1 space-y-4">
           <form className='bg-slate-800 p-4 shadow' onSubmit={handleSubmit}>
             <input 
@@ -54,34 +54,36 @@ const Contact = () => {
               value={nameValue}
               onChange={(e) => setNameValue(e.target.value)}
               placeholder='Full Name'
-              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[2.5%]"
             />
             <input 
               type='email'
               value={emailValue}
               onChange={(e) => setEmailValue(e.target.value)}
               placeholder='example@gmail.com'
-              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[2.5%]"
             />
             <input 
               type='text'
               value={subjectValue}
               onChange={(e) => setSubjectValue(e.target.value)}
               placeholder='Subject'
-              className="w-full text-gray-800 rounded-md py-2.5 mb-4 px-4 border text-sm shadow"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[2.5%]"
             />
             <textarea 
               placeholder='Please let me know how I can help.'
               value={messageValue}
               onChange={(e) => setMessageValue(e.target.value)}
               rows="6"
-              className="w-full text-gray-800 rounded-md px-4 mb-4 border text-sm pt-2.5 shadow"
+              className="w-full text-slate-800 rounded-md px-4 mt-4 border text-sm pt-2.5 shadow w-[95%] ml-[2.5%]"
             />
-            <button
-              type='submit'
-              className="text-white bg-red-800 hover:bg-red-700 align-right w-[25%] rounded-md text-sm shadow px-4 py-3 w-full !mt-6">
-              Send Message
-            </button>
+            <div className="flex justify-end">
+              <button
+                type='submit'
+                className="text-white bg-red-800 hover:bg-red-700 w-[25%] rounded-md text-sm shadow px-4 py-3 mt-4 mr-4">
+                Send Message
+              </button>
+            </div>
             </form>
         </div>
 
