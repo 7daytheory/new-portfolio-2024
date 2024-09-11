@@ -57,7 +57,7 @@ const allProjects = {
       projectName: "Hang Your Banner",
       projectDesc: "A tool that allows you to create your own championship banners for teams that don't have real ones.",
       projectType: "React, Javascript, HTML, CSS",
-      projectLink: "www.hangyourbanner.com",
+      projectLink: "http://www.hangyourbanner.com",
       projectImage: null
     },
 	  {
