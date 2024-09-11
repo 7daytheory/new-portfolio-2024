@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
+import ClimbingPhoto from '../../assets/climbing-photo.jpg';
  
 const Contact = () => {
   const [nameValue, setNameValue] = useState('');
@@ -89,13 +90,16 @@ const Contact = () => {
 
         <div className="flex-1">
           <Fade duration={1000} delay={1000} direction='up' triggerOnce>
-            <h1 className="text-4xl font-extrabold text-red-800 mb-8">About Me</h1>
+            <h1 className="text-4xl font-bold text-red-800 mb-2">About Me</h1>
           </Fade>
           <Fade duration={1000} delay={1500} direction='up' cascade triggerOnce>
           <div className='text-slate-800 text-sm'>
             <p>I'm an experienced application developer with 10 years in the industry. I enjoy roles where I'm not confined to the same thing daily, some days I'm building user-facing front-end pages with JavaScript/React, other days I'm porting old C code to create PWAs.</p>
             <p>My design skills also come in handy. I can quickly tweak CSS to solve design issues without needing a lengthy process, saving time for everyone.</p>
-            <p>Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
+            <div className="p-2 border border-2 border-white w-[75%] rounded-lg shadow-lg flex m-auto">
+              <img src={ClimbingPhoto} alt="Matthew Lowe Climbing" className="h-auto border-red-800 border-2 border justify-center"></img>
+            </div>
+            <p className="mt-2">Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
           </div>
           </Fade>
         </div>
