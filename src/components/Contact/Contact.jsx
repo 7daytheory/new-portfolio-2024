@@ -55,28 +55,28 @@ const Contact = () => {
               value={nameValue}
               onChange={(e) => setNameValue(e.target.value)}
               placeholder='Full Name'
-              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[3%]"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%]"
             />
             <input 
               type='email'
               value={emailValue}
               onChange={(e) => setEmailValue(e.target.value)}
               placeholder='example@gmail.com'
-              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[3%]"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%]"
             />
             <input 
               type='text'
               value={subjectValue}
               onChange={(e) => setSubjectValue(e.target.value)}
               placeholder='Subject'
-              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%] ml-[3%]"
+              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%]"
             />
             <textarea 
               placeholder='Please let me know how I can help.'
               value={messageValue}
               onChange={(e) => setMessageValue(e.target.value)}
               rows="6"
-              className="w-full text-slate-800 rounded-md px-4 mt-4 border text-sm pt-2.5 shadow w-[95%] ml-[3%]"
+              className="w-full text-slate-800 rounded-md px-4 mt-4 border text-sm pt-2.5 shadow w-[95%]"
             />
             <div className="flex justify-end">
               <button
@@ -96,7 +96,7 @@ const Contact = () => {
           <div className='text-slate-800 text-sm'>
             <p>I'm an experienced application developer with 10 years in the industry. I enjoy roles where I'm not confined to the same thing daily, some days I'm building user-facing front-end pages with JavaScript/React, other days I'm porting old C code to create PWAs.</p>
             <p>My design skills also come in handy. I can quickly tweak CSS to solve design issues without needing a lengthy process, saving time for everyone.</p>
-            <div className="p-2 border border-2 border-white w-[75%] rounded-lg shadow-lg flex m-auto">
+            <div className="p-2 border border-2 border-white w-[75%] sm:w-[100%] rounded-lg shadow-lg flex m-auto">
               <img src={ClimbingPhoto} alt="Matthew Lowe Climbing" className="h-auto border-red-800 border-2 border justify-center"></img>
             </div>
             <p className="mt-2">Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
