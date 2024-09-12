@@ -48,8 +48,8 @@ const Contact = () => {
             <div className="text-red-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold" id="contact">CONTACT ME <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
       <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-lg font-[sans-serif]">
-        <div className="flex-1 space-y-4">
-          <form className='bg-slate-800 p-4 shadow' onSubmit={handleSubmit}>
+        <div className="flex-1 space-y-4 border-4 border-white shadow-lg rounded-lg">
+          <form className='bg-slate-800 p-4 shadow border-red-800 border-4' onSubmit={handleSubmit}>
             <input 
               type='text'
               value={nameValue}
@@ -81,7 +81,7 @@ const Contact = () => {
             <div className="flex justify-end">
               <button
                 type='submit'
-                className="text-white bg-red-800 hover:bg-red-700 w-[25%] rounded-md text-sm shadow px-4 py-3 mt-4 mr-4">
+                className="text-white bg-red-800 hover:bg-red-700 w-[100%] lg:w-[35%] lg:mr-4 rounded-md text-sm shadow px-4 py-3 mt-4">
                 Send Message
               </button>
             </div>
@@ -96,8 +96,8 @@ const Contact = () => {
           <div className='text-slate-800 text-sm'>
             <p>I'm an experienced application developer with 10 years in the industry. I enjoy roles where I'm not confined to the same thing daily, some days I'm building user-facing front-end pages with JavaScript/React, other days I'm porting old C code to create PWAs.</p>
             <p>My design skills also come in handy. I can quickly tweak CSS to solve design issues without needing a lengthy process, saving time for everyone.</p>
-            <div className="p-2 border border-2 border-white w-[75%] sm:w-[100%] rounded-lg shadow-lg flex m-auto">
-              <img src={ClimbingPhoto} alt="Matthew Lowe Climbing" className="h-auto border-red-800 border-2 border justify-center"></img>
+            <div className="p-2 border border-4 border-white w-[75%] sm:w-[100%] rounded-lg shadow-lg flex m-auto">
+              <img src={ClimbingPhoto} alt="Matthew Lowe Climbing" className="h-auto border-red-800 border-4 border justify-center"></img>
             </div>
             <p className="mt-2">Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
           </div>
