@@ -7,10 +7,10 @@ import { toast, ToastContainer } from 'react-toastify';
 import ClimbingPhoto from '../../assets/climbing-photo.jpg';
  
 const Contact = () => {
-  const [nameValue, setNameValue
-  const [emailValue, setEmailValue
-  const [subjectValue, setSubjectValue
-  const [messageValue, setMessageValue
+  const [nameValue, setNameValue] = useState('');
+  const [emailValue, setEmailValue] = useState('');
+  const [subjectValue, setSubjectValue] = useState('');
+  const [messageValue, setMessageValue] = useState('');
 
   const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
   const TEMPLATE_KEY = import.meta.env.VITE_TEMPLATE_CONTACT_KEY;
