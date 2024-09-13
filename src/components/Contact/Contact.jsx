@@ -7,10 +7,10 @@ import { toast, ToastContainer } from 'react-toastify';
 import ClimbingPhoto from '../../assets/climbing-photo.jpg';
  
 const Contact = () => {
-  const [nameValue, setNameValue] = useState('');
-  const [emailValue, setEmailValue] = useState('');
-  const [subjectValue, setSubjectValue] = useState('');
-  const [messageValue, setMessageValue] = useState('');
+  const [nameValue, setNameValue
+  const [emailValue, setEmailValue
+  const [subjectValue, setSubjectValue
+  const [messageValue, setMessageValue
 
   const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
   const TEMPLATE_KEY = import.meta.env.VITE_TEMPLATE_CONTACT_KEY;
@@ -32,6 +32,10 @@ const Contact = () => {
     .send(SERVICE_KEY, TEMPLATE_KEY, emailParams, PUBLIC_KEY)
     .then(
       (result) => {
+        setNameValue('');
+        setEmailValue('');
+        setSubjectValue('');
+        setMessageValue('');
         console.log(result.text);
         toast.success('Success! Please check your email.');
       },
@@ -97,7 +101,7 @@ const Contact = () => {
             <p>I'm an experienced application developer with 10 years in the industry. I enjoy roles where I'm not confined to the same thing daily, some days I'm building user-facing front-end pages with JavaScript/React, other days I'm porting old C code to create PWAs.</p>
             <p>My design skills also come in handy. I can quickly tweak CSS to solve design issues without needing a lengthy process, saving time for everyone.</p>
             <div className="p-2 border border-4 border-white w-90-% lg:w-[75%] rounded-lg shadow-lg flex m-auto">
-              <img src={ClimbingPhoto} alt="Matthew Lowe Climbing" className="h-auto border-red-800 border-4 border justify-center"></img>
+              <img src={ClimbingPhoto} alt="Matthew Lowe Rock Climbing" className="h-auto border-red-800 border-4 border justify-center"></img>
             </div>
             <p className="mt-2">Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
           </div>
