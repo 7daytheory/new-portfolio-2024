@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import emailjs from 'emailjs-com';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import ClimbingPhoto from '../../assets/climbing-photo.jpg';
  
 const Contact = () => {
@@ -104,6 +104,7 @@ const Contact = () => {
           </Fade>
         </div>
       </div>
+      <ToastContainer position="top-center" className="fixed"/>
     </div>
   );
 };

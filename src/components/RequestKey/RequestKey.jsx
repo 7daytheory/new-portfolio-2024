@@ -180,7 +180,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
         </div>
       )}
 
-      <ToastContainer />
+      <ToastContainer position="top-center" className="fixed"/>
     </div>
   );
 };
