@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const RequestKey = ({ wrapWidth, closeForm }) => {
@@ -48,6 +48,11 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
     .send(SERVICE_KEY, TEMPLATE_KEY, emailParams, PUBLIC_KEY)
       .then(
         (result) => {
+          setFirstName('');
+          setLastName('');
+          setEmailValue('');
+          setPhoneValue('');
+          setCompanyValue('');
           console.log(result.text);
           toast.success('API key sent successfully to your email!');
         },
@@ -179,8 +184,6 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
           Your API key is {keyValue}. Check your email if you'd like to save it for later. Thank you for your interest in viewing my resume via an API request.
         </div>
       )}
-
-      <ToastContainer position="top-center" className="fixed"/>
     </div>
   );
 };
