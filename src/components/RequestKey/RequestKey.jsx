@@ -48,6 +48,11 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
     .send(SERVICE_KEY, TEMPLATE_KEY, emailParams, PUBLIC_KEY)
       .then(
         (result) => {
+          setFirstName('');
+          setLastName('');
+          setEmailValue('');
+          setPhoneValue('');
+          setCompanyValue('');
           console.log(result.text);
           toast.success('API key sent successfully to your email!');
         },
