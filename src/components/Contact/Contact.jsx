@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import emailjs from 'emailjs-com';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import ClimbingPhoto from '../../assets/climbing-photo.jpg';
  
 const Contact = () => {
@@ -56,6 +56,7 @@ const Contact = () => {
           <form className='bg-slate-800 p-4 shadow border-red-800 border-4' onSubmit={handleSubmit}>
             <input 
               type='text'
+              name='name'
               value={nameValue}
               onChange={(e) => setNameValue(e.target.value)}
               placeholder='Full Name'
@@ -63,6 +64,7 @@ const Contact = () => {
             />
             <input 
               type='email'
+              name='email'
               value={emailValue}
               onChange={(e) => setEmailValue(e.target.value)}
               placeholder='example@gmail.com'
@@ -70,6 +72,7 @@ const Contact = () => {
             />
             <input 
               type='text'
+              name='subject'
               value={subjectValue}
               onChange={(e) => setSubjectValue(e.target.value)}
               placeholder='Subject'
@@ -77,6 +80,7 @@ const Contact = () => {
             />
             <textarea 
               placeholder='Please let me know how I can help.'
+              name='message'
               value={messageValue}
               onChange={(e) => setMessageValue(e.target.value)}
               rows="6"
@@ -108,7 +112,6 @@ const Contact = () => {
           </Fade>
         </div>
       </div>
-      <ToastContainer position="top-center" className="fixed"/>
     </div>
   );
 };
