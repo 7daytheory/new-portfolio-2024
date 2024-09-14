@@ -8,7 +8,7 @@ const MainLayout = () => {
     <>
         <Navigation />
         <Outlet />
-        <ToastContainer position="fixed top-center"/>
+        <ToastContainer position="top-center" className="fixed w-[100%] lg:w-[30%] center m-auto" />
     </>
   )
 }
