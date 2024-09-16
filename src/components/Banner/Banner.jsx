@@ -17,7 +17,7 @@ const Banner = () => {
         <Fade direction='down' duration={2000}>
           <p className="relative text-lg md:text-md text-gray-700 z-2">
             I am a developer with over 9 years experience. 
-            I build Web and Mobile applications with JavaScript, React/Angular, PHP, Laravel/CakePHP, Bootstrap, Flexbox, and other cool libraries and frameworks. 
+            I build Web and Mobile applications with JavaScript, React/Angular, PHP, Laravel/CakePHP, Bootstrap, Tailwindcss, Flexbox, and more. 
             I also have a background in graphic design which has been a useful skill for smaller companies or for hot fixes.
           </p>
         </Fade>
