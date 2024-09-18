@@ -80,4 +80,48 @@ To get a local copy up and running, follow these steps:
     npm run preview
 
 
-    
+## Scripts
+- `dev`: Starts the Vite development server
+- `build`: Builds the project for production
+- `lint`: Lints the project files using ESLint
+- `preview`: Serves the production build for preview
+- `build:css`: Compiles Tailwind CSS to the output file
+
+## Dependencies
+- **@emotion/react**: For CSS-in-JS styling
+- **@fortawesome/fontawesome-svg-core**: Core package for FontAwesome
+- **@fortawesome/free-solid-svg-icons**: Free solid icons from FontAwesome
+- **@fortawesome/react-fontawesome**: FontAwesome components for React
+- **autoprefixer**: Adds vendor prefixes to CSS
+- **dotenv**: Loads environment variables
+- **emailjs-com**: Send emails from the client-side
+- **postcss**: Tool for transforming CSS
+- **react**: JavaScript library for building user interfaces
+- **react-awesome-reveal**: Animation library for React components
+- **react-dom**: React package for working with the DOM
+- **react-lottie**: Lottie animation for React
+- **react-router-dom**: Routing library for React
+- **react-toastify**: Notification library for React
+- **react-vertical-timeline-component**: Component for vertical timelines
+- **tailwindcss**: Utility-first CSS framework
+
+## Dev Dependencies
+- **@eslint/js**: ESLint library for JavaScript
+- **@types/react**: TypeScript types for React
+- **@types/react-dom**: TypeScript types for React DOM
+- **@vitejs/plugin-react**: Official React plugin for Vite
+- **eslint**: Linter for JavaScript and JSX
+- **eslint-plugin-react**: ESLint rules for React
+- **eslint-plugin-react-hooks**: ESLint rules for React Hooks
+- **eslint-plugin-react-refresh**: ESLint plugin for React Fast Refresh
+- **globals**: Library that provides globally available variables
+- **vite**: Next Generation Frontend Tooling
+
+## Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
