@@ -43,3 +43,41 @@ To get a local copy up and running, follow these steps:
 
 ### Prerequisites
 - Node.js and npm installed on your machine. You can download them from [here](https://nodejs.org/).
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/new-portfolio-2024.git
+
+   ### Installation
+2. Navigate to repository:
+   ```bash
+   cd new-portfolio-2024
+
+   ### Installation
+3. Install dependencies:
+   ```bash
+   npm install
+
+    ```
+    ## Running The Project
+    ### To Start Dev Server, run:
+    ```bash
+    npm run dev
+    ```
+    Open http://localhost:5173 to view the project in your browser.
+
+    ```
+    ## Running The Project
+    ### To create a build , run:
+    ```bash
+    npm run build
+
+    ```
+    ## Running The Project
+    ### To Preview the production build locally, run:
+    ```bash
+    npm run preview
+
+
+    
