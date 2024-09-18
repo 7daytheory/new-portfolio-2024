@@ -1,8 +1,127 @@
-# React + Vite
+# New Portfolio 2024
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a personal portfolio website built using React, Vite, and Tailwind CSS. It showcases various sections like the banner, projects, experience, contact form, and more. The project is designed to be responsive and includes features like animations, form submissions, and toast notifications.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Demo](#demo)
+- [Features](#features)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Project](#running-the-project)
+  - [Build for Production](#build-for-production)
+- [Scripts](#scripts)
+- [Dependencies](#dependencies)
+- [Dev Dependencies](#dev-dependencies)
+- [Contributing](#contributing)
+- [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
+Check out the live site at [matthewjlowe.com](https://matthewjlowe.com)
+
+## Features
+- Responsive layout across different screen sizes
+- Animated transitions and reveals
+- Form submission with email notifications using EmailJS
+- Toast notifications for user feedback
+- Vertical timeline for experience section
+- Lottie animations for enhanced visuals
+- Modern styling with Tailwind CSS
+- Environment configuration using dotenv
+
+## Built With
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [FontAwesome](https://fontawesome.com/) - Icons and social logos
+- [EmailJS](https://www.emailjs.com/) - Send emails using client-side technology
+- [React Router](https://reactrouter.com/) - Declarative routing for React
+
+## Getting Started
+To get a local copy up and running, follow these steps:
+
+### Prerequisites
+- Node.js and npm installed on your machine. You can download them from [here](https://nodejs.org/).
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/new-portfolio-2024.git
+
+   ### Installation
+2. Navigate to repository:
+   ```bash
+   cd new-portfolio-2024
+
+   ### Installation
+3. Install dependencies:
+   ```bash
+   npm install
+
+    ```
+    ## Running The Project
+    ### To Start Dev Server, run:
+    ```bash
+    npm run dev
+    ```
+    Open http://localhost:5173 to view the project in your browser.
+
+    ```
+    ## Running The Project
+    ### To create a build , run:
+    ```bash
+    npm run build
+
+    ```
+    ## Running The Project
+    ### To Preview the production build locally, run:
+    ```bash
+    npm run preview
+
+
+## Scripts
+- `dev`: Starts the Vite development server
+- `build`: Builds the project for production
+- `lint`: Lints the project files using ESLint
+- `preview`: Serves the production build for preview
+- `build:css`: Compiles Tailwind CSS to the output file
+
+## Dependencies
+- **@emotion/react**: For CSS-in-JS styling
+- **@fortawesome/fontawesome-svg-core**: Core package for FontAwesome
+- **@fortawesome/free-solid-svg-icons**: Free solid icons from FontAwesome
+- **@fortawesome/react-fontawesome**: FontAwesome components for React
+- **autoprefixer**: Adds vendor prefixes to CSS
+- **dotenv**: Loads environment variables
+- **emailjs-com**: Send emails from the client-side
+- **postcss**: Tool for transforming CSS
+- **react**: JavaScript library for building user interfaces
+- **react-awesome-reveal**: Animation library for React components
+- **react-dom**: React package for working with the DOM
+- **react-lottie**: Lottie animation for React
+- **react-router-dom**: Routing library for React
+- **react-toastify**: Notification library for React
+- **react-vertical-timeline-component**: Component for vertical timelines
+- **tailwindcss**: Utility-first CSS framework
+
+## Dev Dependencies
+- **@eslint/js**: ESLint library for JavaScript
+- **@types/react**: TypeScript types for React
+- **@types/react-dom**: TypeScript types for React DOM
+- **@vitejs/plugin-react**: Official React plugin for Vite
+- **eslint**: Linter for JavaScript and JSX
+- **eslint-plugin-react**: ESLint rules for React
+- **eslint-plugin-react-hooks**: ESLint rules for React Hooks
+- **eslint-plugin-react-refresh**: ESLint plugin for React Fast Refresh
+- **globals**: Library that provides globally available variables
+- **vite**: Next Generation Frontend Tooling
+
+## Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
