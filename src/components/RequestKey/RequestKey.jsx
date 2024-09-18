@@ -75,6 +75,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
           <div class="max-w-lg mx-auto">
             <div>
               <h1 class="text-2xl font-semibold">Request an API Key</h1>
+              <p>I just set this up and am setting up Node on the hosting, I apologize if it's not in service yet but it will be very shortly! Just something I thought would be different and a bit neat for us nerdy people.</p>
             </div>
             <div class="divide-y divide-gray-200">
               <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
@@ -170,7 +171,7 @@ const RequestKey = ({ wrapWidth, closeForm }) => {
                   </div>
 
                   <div class="relative mb-6 cursor-pointer flex justify-end">
-                    <button class="bg-slate-800 hover:bg-slate-600 text-white rounded-md px-4 py-2">Submit</button>
+                    <button class="bg-slate-800 hover:bg-slate-600 text-white rounded-md px-4 py-2" disabled>Submit</button>
                   </div>
                 </form>
               </div>
