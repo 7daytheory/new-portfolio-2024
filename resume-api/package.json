@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node resume-api/index.js"
+    "start": "pm2 start resume-api/index.js"
   },
   "dependencies": {
     "express": "^4.17.1"
