@@ -6,6 +6,7 @@
     "start": "pm2 start ./index.js"
   },
   "dependencies": {
+    "body-parser": "^1.20.3",
     "express": "^4.17.1"
   }
 }
