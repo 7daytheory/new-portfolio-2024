@@ -3,19 +3,20 @@
 This project is a personal portfolio website built using React, Vite, and Tailwind CSS. It showcases various sections like the banner, projects, experience, contact form, and more. The project is designed to be responsive and includes features like animations, form submissions, and toast notifications.
 
 ## Table of Contents
-- [Demo](#demo)
-- [Features](#features)
-- [Built With](#built-with)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Running the Project](#running-the-project)
-  - [Build for Production](#build-for-production)
-- [Scripts](#scripts)
-- [Dependencies](#dependencies)
-- [Dev Dependencies](#dev-dependencies)
-- [Contributing](#contributing)
-- [License](#license)
+- [New Portfolio 2024](#new-portfolio-2024)
+  - [Table of Contents](#table-of-contents)
+  - [Demo](#demo)
+  - [Features](#features)
+  - [Built With](#built-with)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Scripts](#scripts)
+  - [Dependencies](#dependencies)
+  - [Dev Dependencies](#dev-dependencies)
+  - [Contributing](#contributing)
+  - [Setting up Node Server](#setting-up-node-server)
+    - [Install Node](#install-node)
 
 ## Demo
 Check out the live site at [matthewjlowe.com](https://matthewjlowe.com)
@@ -123,3 +124,21 @@ Contributions are what make the open-source community such an amazing place to l
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+## Setting up Node Server
+
+Install NVM (Node Version Manager)
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+<p>After running the installation script, you should close and reopen your terminal, or you can run the following command to use NVM immediately:</p>
+```bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # loads nvm bash_completion
+
+### Install Node
+```bash
+nvm install node  # installs latest Node.js version
+nvm use node      # use installed node
+
