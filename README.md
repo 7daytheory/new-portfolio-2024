@@ -18,6 +18,7 @@ This project is a personal portfolio website built using React, Vite, and Tailwi
   - [Setting up Node Server](#setting-up-node-server)
     - [Install Node](#install-node)
     - [Install PM2](#install-pm2)
+    - [Set up application to auto-start](#set-up-application-to-auto-start)
 
 ## Demo
 Check out the live site at [matthewjlowe.com](https://matthewjlowe.com)
@@ -147,3 +148,19 @@ nvm use node      # use installed node
 
 ### Install PM2 
 <p>With Node.js and npm installed, you can now install PM2, which is used to manage and keep your Node.js applications running - you can just use node but PM2 has many helpful features:</p>
+```bash
+npm install pm2@latest -g  # Installs PM2 globally
+
+<p>Start the application with PM2</p>
+```bash
+pm2 start index.js --name "app name"  # I used index.js but it might be server.js or app.js - and insert your app name from package
+
+### Set up application to auto-start
+```bash
+pm2 startup  # Run as superuser
+
+```bash
+pm2 save # Savecurrent list of processes
+
+
+
