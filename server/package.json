@@ -1,12 +1,12 @@
 {
-  "name": "portfolio-api",
+  "name": "resume-api",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "pm2 start ./index.js"
   },
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pm2": "^5.4.2"
   }
 }
