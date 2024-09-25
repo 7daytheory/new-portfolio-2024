@@ -17,6 +17,7 @@ This project is a personal portfolio website built using React, Vite, and Tailwi
   - [Contributing](#contributing)
   - [Setting up Node Server](#setting-up-node-server)
     - [Install Node](#install-node)
+    - [Install PM2](#install-pm2)
 
 ## Demo
 Check out the live site at [matthewjlowe.com](https://matthewjlowe.com)
@@ -142,3 +143,7 @@ export NVM_DIR="$HOME/.nvm"
 nvm install node  # installs latest Node.js version
 nvm use node      # use installed node
 
+<p>You can verify if this worked by checking version with -v (node -v or nvm -v)</p>
+
+### Install PM2 
+<p>With Node.js and npm installed, you can now install PM2, which is used to manage and keep your Node.js applications running - you can just use node but PM2 has many helpful features:</p>
