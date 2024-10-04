@@ -74,6 +74,13 @@ const allProjects = {
       projectLink: "quiz/index.html",
       projectImage: null
     },
+    {
+      projectName: "AI Article Summarizer",
+      projectDesc: "Put the URL of an article and it will summarize the content",
+      projectType: "React, Javascript, HTML, CSS",
+      projectLink: "summarizer/index.html",
+      projectImage: null
+    },
   ]
 };
 
