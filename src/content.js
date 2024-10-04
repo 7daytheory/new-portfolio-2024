@@ -68,6 +68,13 @@ const allProjects = {
       projectImage: null
     },
     {
+      projectName: "AI Article Summarizer",
+      projectDesc: "Put the URL of an article and it will summarize the content",
+      projectType: "React, Javascript, HTML, CSS",
+      projectLink: "summarizer/index.html",
+      projectImage: null
+    },
+    {
       projectName: "Quiz Game",
       projectDesc: "Quiz game that uses an API to fetch questions and keeps score.",
       projectType: "Javascript, HTML, CSS3, localstorage",
@@ -75,9 +82,9 @@ const allProjects = {
       projectImage: null
     },
     {
-      projectName: "AI Article Summarizer",
-      projectDesc: "Put the URL of an article and it will summarize the content",
-      projectType: "React, Javascript, HTML, CSS",
+      projectName: "Simonr",
+      projectDesc: "Test your memory with this classic game",
+      projectType: "Javascript, HTML, CSS",
       projectLink: "summarizer/index.html",
       projectImage: null
     },
