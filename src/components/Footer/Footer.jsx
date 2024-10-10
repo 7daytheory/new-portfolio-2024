@@ -47,7 +47,7 @@ const Footer = () => {
                 </a>
             </div>
             <p className="mt-8 text-base leading-6 text-center text-gray-400">
-                © 2024 Lowelight, Inc. All rights reserved.
+                © 2024 Matthew Lowe, Inc. All rights reserved.
             </p>
         </div>
     </section>
