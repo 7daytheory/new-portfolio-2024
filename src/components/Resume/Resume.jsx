@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import apiLogo from '../../assets/api-logo.png'
+//import apiLogo from '../../assets/api-logo.png'
 import pdfLogo from '../../assets/pdf-logo.png'
 import MyResume from '../../assets/resumeWeb.pdf'
 import { Fade } from "react-awesome-reveal";
@@ -45,7 +45,8 @@ import RequestKey from '../RequestKey/RequestKey';
         </Fade>
         <Fade direction='bottom' duration={2000}>
             {/* <p className="mb-5 text-base sm:text-lg text-slate-800">You can download a PDF version or you can request an API key and receive it with a POST request.</p> */}
-            <p className="mb-5 text-base sm:text-lg text-slate-800">You can download a PDF version of my resume below, I have altered it for the web to exclude my personal details.</p>
+            <p className="mb-5 text-base sm:text-lg text-slate-800">You can download a PDF version of my resume below, I have altered it for the web to exclude my personal details.</p>  
+            <p> </p>  
         </Fade>
         <div className="m-auto items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse mb-2">
             <div id="btnWidth" ref={wrapRef} className="md:inline-flex md:space-x-4">
@@ -62,7 +63,7 @@ import RequestKey from '../RequestKey/RequestKey';
                     <div className="-mt-1 font-sans text-sm font-semibold">Via an API</div>
                 </div>
             </a> */}
-            <a href={MyResume} id="pdfResume" download="Lowe,Matthew Resume" className="w-full inline sm:w-auto bg-slate-800 hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.25)] inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+            <a href={MyResume} id="pdfResume" download="Lowe, Matthew Resume" className="w-full inline sm:w-auto bg-slate-800 hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.25)] inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                 <img
                     src={pdfLogo} 
                     alt="Pdf Logo" 
