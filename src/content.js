@@ -81,6 +81,13 @@ const allProjects = {
       projectLink: "summarizer/index.html",
       projectImage: null
     },
+    {
+      projectName: "Simon(Game)",
+      projectDesc: "Remember the color pattern and repeat it by pressing the colored buttons",
+      projectType: "React, Javascript, HTML, CSS",
+      projectLink: "simon/index.html",
+      projectImage: null
+    },
   ]
 };
 
