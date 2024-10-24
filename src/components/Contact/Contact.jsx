@@ -54,6 +54,7 @@ const Contact = () => {
         </Fade>
       <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-lg font-[sans-serif]">
       <div className="flex-1 space-y-4 w-full">
+        <Fade duration={1000} triggerOnce>
           <form className='p-4 md:mt-8' onSubmit={handleSubmit}>
             <div className="relative z-0 w-full mb-5">
               <input
@@ -113,22 +114,29 @@ const Contact = () => {
               </button>
             </div>
           </form>
+          </Fade>
         </div>
 
         <div className="flex-1">
-          <Fade duration={750} delay={500} direction='right' triggerOnce>
+          <Fade duration={1000} delay={1000} direction='right' triggerOnce>
             <h1 className="text-4xl font-bold text-red-800 mb-2 mt-[-35px]">About Me</h1>
           </Fade>
-          <Fade duration={1250} delay={750} cascade direction='right' triggerOnce>
           <div className='text-slate-800 text-sm'>
+          <Fade duration={1500} delay={500} direction='left' triggerOnce>
             <p>I'm an experienced application developer with 10 years in the industry. I enjoy roles where I'm not confined to the same thing daily, some days I'm building user-facing front-end pages with JavaScript/React, other days I'm porting old C code to create PWAs.</p>
+          </Fade>
+          <Fade duration={750} delay={1250} direction='down' triggerOnce>
             <p>My design skills also come in handy. I can quickly tweak CSS to solve design issues without needing a lengthy process, saving time for everyone.</p>
+          </Fade>
+          <Fade duration={500} delay={1500} triggerOnce>
             <div className="p-2 border border-4 border-white w-90-% lg:w-[75%] rounded-lg shadow-lg flex m-auto">
               <img src={ClimbingPhoto} alt="Matthew Lowe Rock Climbing" className="h-auto border-red-800 border-4 border justify-center"></img>
             </div>
-            <p className="mt-2">Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
-          </div>
           </Fade>
+          <Fade duration={1250} delay={750} direction='right' triggerOnce>
+            <p className="mt-2">Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
+          </Fade>
+          </div>
         </div>
       </div>
     </div>
