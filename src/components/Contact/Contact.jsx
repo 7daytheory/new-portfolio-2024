@@ -53,8 +53,8 @@ const Contact = () => {
             <div className="text-red-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold" id="contact">CONTACT ME <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
       <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-lg font-[sans-serif]">
-      <div className="flex-1 space-y-4 w-[80%]">
-          <form className='p-4' onSubmit={handleSubmit}>
+      <div className="flex-1 space-y-4 w-full">
+          <form className='p-4 md:mt-8' onSubmit={handleSubmit}>
             <div className="relative z-0 w-full mb-5">
               <input
                 type="text"
@@ -63,7 +63,7 @@ const Contact = () => {
                 onChange={(e) => setNameValue(e.target.value)}
                 placeholder=" "
                 required
-                className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+                className="pt-3 pb-2 block w-full md:w-3/4 px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
               />
               <label htmlFor="name" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter name</label>
             </div>
@@ -76,7 +76,7 @@ const Contact = () => {
                 onChange={(e) => setEmailValue(e.target.value)}
                 placeholder=" "
                 required
-                className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+                className="pt-3 pb-2 block w-full md:w-3/4 px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
               />
               <label htmlFor="email" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter email address</label>
             </div>
@@ -88,7 +88,7 @@ const Contact = () => {
                 value={subjectValue}
                 onChange={(e) => setSubjectValue(e.target.value)}
                 placeholder=" "
-                className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+                className="pt-3 pb-2 block w-full md:w-3/4 px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
               />
               <label htmlFor="subject" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter subject</label>
             </div>
@@ -99,8 +99,8 @@ const Contact = () => {
                 value={messageValue}
                 onChange={(e) => setMessageValue(e.target.value)}
                 placeholder=" "
-                rows="6"
-                className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+                rows="5"
+                className="pt-3 pb-2 block w-full md:w-3/4 px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
               />
               <label htmlFor="message" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Please let me know how I can help</label>
             </div>
@@ -108,7 +108,7 @@ const Contact = () => {
             <div className="flex justify-end">
               <button
                 type='submit'
-                className="text-white bg-red-800 hover:bg-red-700 w-full lg:w-[35%] rounded-md text-sm shadow px-4 py-3 mt-4">
+                className="text-white bg-red-800 hover:bg-red-700 w-full lg:w-[35%] rounded-md text-sm shadow px-4 py-3 mt-4 md:mr-[25%]">
                 Send Message
               </button>
             </div>
