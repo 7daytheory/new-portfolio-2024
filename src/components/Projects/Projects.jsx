@@ -13,7 +13,7 @@ const Projects = () => {
             <div className="text-white text-[3em] absolute ml-[5%] top-[-23px] font-bold">PROJECTS <FontAwesomeIcon icon={faArrowDown} /></div>
           </Fade>
             <div className="flex justify-center space-x-4 mt-12">
-              <Fade duration={2500} triggerOnce>
+              <Fade duration={500} triggerOnce cascade >
               <div className="flex flex-wrap justify-between gap-6">
                 {allProjects.projects.map((card, i) => {
                       return (
