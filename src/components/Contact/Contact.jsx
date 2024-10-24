@@ -5,6 +5,7 @@ import { Fade } from 'react-awesome-reveal';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import ClimbingPhoto from '../../assets/climbing-photo.jpg';
+import './Contact.css'
  
 const Contact = () => {
   const [nameValue, setNameValue] = useState('');
@@ -15,7 +16,7 @@ const Contact = () => {
   const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
   const TEMPLATE_KEY = import.meta.env.VITE_TEMPLATE_CONTACT_KEY;
   const SERVICE_KEY = import.meta.env.VITE_SERVICE_KEY;
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
   
@@ -52,48 +53,66 @@ const Contact = () => {
             <div className="text-red-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold" id="contact">CONTACT ME <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
       <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-lg font-[sans-serif]">
-        <div className="flex-1 space-y-4 border-4 border-white shadow-lg rounded-lg">
-          <form className='bg-slate-800 p-4 shadow border-red-800 border-4' onSubmit={handleSubmit}>
-            <input 
-              type='text'
-              name='name'
-              value={nameValue}
-              onChange={(e) => setNameValue(e.target.value)}
-              placeholder='Full Name'
-              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%]"
-            />
-            <input 
-              type='email'
-              name='email'
-              value={emailValue}
-              onChange={(e) => setEmailValue(e.target.value)}
-              placeholder='example@gmail.com'
-              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%]"
-            />
-            <input 
-              type='text'
-              name='subject'
-              value={subjectValue}
-              onChange={(e) => setSubjectValue(e.target.value)}
-              placeholder='Subject'
-              className="w-full text-slate-800 rounded-md py-2.5 mt-4 px-4 border text-sm shadow w-[95%]"
-            />
-            <textarea 
-              placeholder='Please let me know how I can help.'
-              name='message'
-              value={messageValue}
-              onChange={(e) => setMessageValue(e.target.value)}
-              rows="6"
-              className="w-full text-slate-800 rounded-md px-4 mt-4 border text-sm pt-2.5 shadow w-[95%]"
-            />
+      <div className="flex-1 space-y-4 w-[80%]">
+          <form className='p-4' onSubmit={handleSubmit}>
+            <div className="relative z-0 w-full mb-5">
+              <input
+                type="text"
+                name="name"
+                value={nameValue}
+                onChange={(e) => setNameValue(e.target.value)}
+                placeholder=" "
+                required
+                className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+              />
+              <label htmlFor="name" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter name</label>
+            </div>
+
+            <div className="relative z-0 w-full mb-5">
+              <input
+                type="email"
+                name="email"
+                value={emailValue}
+                onChange={(e) => setEmailValue(e.target.value)}
+                placeholder=" "
+                required
+                className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+              />
+              <label htmlFor="email" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter email address</label>
+            </div>
+
+            <div className="relative z-0 w-full mb-5">
+              <input
+                type="text"
+                name="subject"
+                value={subjectValue}
+                onChange={(e) => setSubjectValue(e.target.value)}
+                placeholder=" "
+                className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+              />
+              <label htmlFor="subject" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter subject</label>
+            </div>
+
+            <div className="relative z-0 w-full mb-5">
+              <textarea
+                name="message"
+                value={messageValue}
+                onChange={(e) => setMessageValue(e.target.value)}
+                placeholder=" "
+                rows="6"
+                className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+              />
+              <label htmlFor="message" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Please let me know how I can help</label>
+            </div>
+
             <div className="flex justify-end">
               <button
                 type='submit'
-                className="text-white bg-red-800 hover:bg-red-700 w-[100%] lg:w-[35%] lg:mr-4 rounded-md text-sm shadow px-4 py-3 mt-4">
+                className="text-white bg-red-800 hover:bg-red-700 w-full lg:w-[35%] rounded-md text-sm shadow px-4 py-3 mt-4">
                 Send Message
               </button>
             </div>
-            </form>
+          </form>
         </div>
 
         <div className="flex-1">
