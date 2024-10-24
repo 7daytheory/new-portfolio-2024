@@ -97,10 +97,10 @@ const Contact = () => {
         </div>
 
         <div className="flex-1">
-          <Fade duration={1000} delay={1000} direction='up' triggerOnce>
+          <Fade duration={750} delay={500} direction='right' triggerOnce>
             <h1 className="text-4xl font-bold text-red-800 mb-2 mt-[-35px]">About Me</h1>
           </Fade>
-          <Fade duration={1000} delay={1500} direction='up' cascade triggerOnce>
+          <Fade duration={1250} delay={750} cascade direction='right' triggerOnce>
           <div className='text-slate-800 text-sm'>
             <p>I'm an experienced application developer with 10 years in the industry. I enjoy roles where I'm not confined to the same thing daily, some days I'm building user-facing front-end pages with JavaScript/React, other days I'm porting old C code to create PWAs.</p>
             <p>My design skills also come in handy. I can quickly tweak CSS to solve design issues without needing a lengthy process, saving time for everyone.</p>
