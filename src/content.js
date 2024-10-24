@@ -60,6 +60,13 @@ const allProjects = {
       projectLink: "http://www.hangyourbanner.com",
       projectImage: null
     },
+    {
+      projectName: "AI Article Summarizer",
+      projectDesc: "Put the URL of an article and it will summarize the content",
+      projectType: "React, Javascript, HTML, CSS",
+      projectLink: "summarizer/index.html",
+      projectImage: null
+    },
 	  {
       projectName: "Kings",
       projectDesc: "The digital version of the (commonly drinking) game Kings, incase you forget cards",
@@ -68,17 +75,17 @@ const allProjects = {
       projectImage: null
     },
     {
+      projectName: "Xs and Os",
+      projectDesc: "Classic game Xs and Os - 2 player (Eventually on different computers)",
+      projectType: "Javascript, HTML, CSS3, localstorage",
+      projectLink: "tictactoe/index.html",
+      projectImage: null
+    },
+    {
       projectName: "Quiz Game",
       projectDesc: "Quiz game that uses an API to fetch questions and keeps score",
       projectType: "Javascript, HTML, CSS3, localstorage",
       projectLink: "quiz/index.html",
-      projectImage: null
-    },
-    {
-      projectName: "AI Article Summarizer",
-      projectDesc: "Put the URL of an article and it will summarize the content",
-      projectType: "React, Javascript, HTML, CSS",
-      projectLink: "summarizer/index.html",
       projectImage: null
     },
     {
