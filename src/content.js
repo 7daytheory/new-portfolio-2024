@@ -1,3 +1,10 @@
+import hangYourBannerImage from './assets/projects/hangyourbanner.png';
+import articleSummarizerImage from './assets/projects/article-summarizer.png';
+import kingsImage from './assets/projects/kings.png';
+import ticTacToeImage from './assets/projects/tictactoe.png';
+import quizImage from './assets/projects/quiz.png';
+import simonImage from './assets/projects/simon.png';
+
 const experiences = [
     {
       title: "Full Stack Developer",
@@ -51,49 +58,60 @@ const experiences = [
 
 //Projects Section
 const allProjects = {
-  display: true,
   projects: [
     {
       projectName: "Hang Your Banner",
-      projectDesc: "A tool that allows you to create your own championship banners for teams that don't have real ones",
+      projectDesc: "Create your own championship banners for teams that don't have real ones",
       projectType: "React, Javascript, HTML, CSS",
       projectLink: "http://www.hangyourbanner.com",
-      projectImage: null
+      projectImage: hangYourBannerImage,
+      projectLogo: null,
+      projectBgColor: null,
     },
     {
       projectName: "AI Article Summarizer",
       projectDesc: "Put the URL of an article and it will summarize the content",
       projectType: "React, Javascript, HTML, CSS",
       projectLink: "summarizer/index.html",
-      projectImage: null
+      projectImage: articleSummarizerImage,
+      projectLogo: null,
+      projectBgColor: null,
     },
 	  {
       projectName: "Kings",
       projectDesc: "The digital version of the (commonly drinking) game Kings, incase you forget cards",
       projectType: "Javascript, JQuery, HTML, CSS3",
       projectLink: "kings/index.html",
-      projectImage: null
+      projectImage: kingsImage,
+      projectLogo: null,
+      projectBgColor: null,
     },
     {
       projectName: "Xs and Os",
       projectDesc: "Classic game Xs and Os - 2 player (Eventually on different computers)",
       projectType: "Javascript, HTML, CSS3, localstorage",
       projectLink: "tictactoe/index.html",
-      projectImage: null
+      projectImage: ticTacToeImage,
+      projectLogo: null,
+      projectBgColor: null,
     },
     {
       projectName: "Quiz Game",
       projectDesc: "Quiz game that uses an API to fetch questions and keeps score",
       projectType: "Javascript, HTML, CSS3, localstorage",
       projectLink: "quiz/index.html",
-      projectImage: null
+      projectImage: quizImage,
+      projectLogo: null,
+      projectBgColor: null,
     },
     {
       projectName: "Simon(Game)",
       projectDesc: "Remember the color pattern and repeat it by pressing the colored buttons",
       projectType: "React, Javascript, HTML, CSS",
       projectLink: "simon/index.html",
-      projectImage: null
+      projectImage: simonImage,
+      projectLogo: null,
+      projectBgColor: null,
     },
   ]
 };
