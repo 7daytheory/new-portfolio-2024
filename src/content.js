@@ -1,9 +1,18 @@
+//Project Images
 import hangYourBannerImage from './assets/projects/hangyourbanner.png';
 import articleSummarizerImage from './assets/projects/article-summarizer.png';
 import kingsImage from './assets/projects/kings.png';
 import ticTacToeImage from './assets/projects/tictactoe.png';
 import quizImage from './assets/projects/quiz.png';
 import simonImage from './assets/projects/simon.png';
+
+//Project Logos
+import hangYourBannerLogo from './assets/projects/hangyourbanner-logo.svg';
+// import articleSummarizerLogo from './assets/projects/article-summarizer-logo.png';
+import kingsLogo from './assets/projects/kings-logo.png';
+// import ticTacToeLogo from './assets/projects/tictactoe-logo.png';
+// import quizLogo from './assets/projects/quiz-logo.png';
+import simonLogo from './assets/projects/simon-logo.png';
 
 const experiences = [
     {
@@ -12,10 +21,10 @@ const experiences = [
       iconBg: "#ff6347",
       date: "Aug 2023 – 2024 (9-month contract)",
       tasks: [
-        "Joined a small startup on a contract to help them grow",
-        "Worked on their back end using Cake 2 PHP to develop a sales system that was integrated with salesforce",
-        "Worked with Git, did code reviews and integrated it with Trello",
-        "Communicated the need for regular meetings, which the owner would not do and caused me to leave after contract ended"
+        "Joined a smaller company on a contract to help them try to create a more efficient environment",
+        "Worked on their front-end and back-end using Cake PHP to develop a sales system that was integrated with salesforce",
+        "Worked with Git, integrated it with Trello and then requested and did code reviews",
+        "Had to learn their entire codebase on my own and explain it t0 a junior deveooper while doing it"
       ],
     },
     {
@@ -65,7 +74,7 @@ const allProjects = {
       projectType: "React, Javascript, HTML, CSS",
       projectLink: "http://www.hangyourbanner.com",
       projectImage: hangYourBannerImage,
-      projectLogo: null,
+      projectLogo: hangYourBannerLogo,
       projectBgColor: null,
     },
     {
@@ -83,7 +92,7 @@ const allProjects = {
       projectType: "Javascript, JQuery, HTML, CSS3",
       projectLink: "kings/index.html",
       projectImage: kingsImage,
-      projectLogo: null,
+      projectLogo: kingsLogo,
       projectBgColor: null,
     },
     {
@@ -96,7 +105,7 @@ const allProjects = {
       projectBgColor: null,
     },
     {
-      projectName: "Quiz Game",
+      projectName: "Sports Quiz",
       projectDesc: "Quiz game that uses an API to fetch questions and keeps score",
       projectType: "Javascript, HTML, CSS3, localstorage",
       projectLink: "quiz/index.html",
@@ -105,12 +114,12 @@ const allProjects = {
       projectBgColor: null,
     },
     {
-      projectName: "Simon(Game)",
+      projectName: "Simon Game",
       projectDesc: "Remember the color pattern and repeat it by pressing the colored buttons",
       projectType: "React, Javascript, HTML, CSS",
       projectLink: "simon/index.html",
       projectImage: simonImage,
-      projectLogo: null,
+      projectLogo: simonLogo,
       projectBgColor: null,
     },
   ]
