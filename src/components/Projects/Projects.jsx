@@ -24,7 +24,8 @@ const Projects = () => {
                             projectDesc: card.projectDesc,
                             projectType: card.projectType,
                             link: card.projectLink,
-                            projectImage: card.projectImage
+                            projectImage: card.projectImage,
+                            projectLogo: card.projectLogo
                           }}
                         />
                       );
