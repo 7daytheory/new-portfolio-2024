@@ -8,70 +8,67 @@ import simonImage from './assets/projects/simon.png';
 
 //Project Logos
 import hangYourBannerLogo from './assets/projects/hangyourbanner-logo.svg';
-// import articleSummarizerLogo from './assets/projects/article-summarizer-logo.png';
 import kingsLogo from './assets/projects/kings-logo.png';
-// import ticTacToeLogo from './assets/projects/tictactoe-logo.png';
-// import quizLogo from './assets/projects/quiz-logo.png';
 import simonLogo from './assets/projects/simon-logo.png';
 
 const experiences = [
-    {
-      title: "Full Stack Developer",
-      company_name: "ShipEarly",
-      iconBg: "#ff6347",
-      date: "Aug 2023 – 2024 (9-month contract)",
-      tasks: [
-        "Joined a smaller company on a contract to help them try to create a more efficient environment",
-        "Worked on their front-end and back-end using Cake PHP to develop a sales system that was integrated with salesforce",
-        "Worked with Git, integrated it with Trello and then requested and did code reviews",
-        "Had to learn their entire codebase on my own and explain it t0 a junior deveooper while doing it"
-      ],
-    },
-    {
-      title: "Developer",
-      company_name: "Quillsoft",
-      iconBg: "#46b1c9",
-      date: "2017 - 2023",
-      tasks: [
-        "Created and oversaw growth of the CRM system",
-        "Built a PWA of the main desktop application for schools",
-        "Developed a license management system",
-        "Implemented up-to-date encryption methods"
-      ],
-    },
-    {
-      title: "Developer",
-      company_name: "Strategic Transitions Inc",
-      date: "2014 – 2017",
-      iconBg: "#9ccd5d",
-      tasks: [
-        "Created and integrated a license management system",
-        "Developed encryption for user data security",
-        "Developed a customized CMS system",
-        "Wireframed, designed, and coded company websites"
-      ],
-    },
-    {
-      title: "BPMS Administrator",
-      company_name: "NeXsys",
-      iconBg: "#5eb54a",
-      date: "2013",
-      tasks: [
-        "Created and integrated a license management system",
-        "Developed encryption for user data security",
-        "Developed a customized CMS system",
-        "Wireframed, designed, and coded company websites"
-      ],
-    },
-  ];
+  {
+    title: "Full Stack Developer",
+    company_name: "ShipEarly",
+    iconBg: "#ff6347",
+    date: "September 2023 – 2024 (contract)",
+    tasks: [
+      "Joined a startup on a contract to contribute to creating a more efficient work environment.",
+      "Developed a sales system integrated with Salesforce using Cake PHP and Javascript for both front-end and back-end.",
+      "Collaborated via Git, integrated it with Trello, and participated in and ran code reviews.",
+      "Independently learned the codebase and taught it to a junior developer while doing it.",
+    ],
+  },
+  {
+    title: "Full Stack Developer",
+    company_name: "Quillsoft",
+    iconBg: "#46b1c9",
+    date: "2017 - 2023",
+    tasks: [
+      "Designed and led the development of a CRM system.",
+      "Built a Progressive Web Application (PWA) for the main desktop application used in schools.",
+      "Developed a license management system.",
+      "Implemented modern encryption methods for enhanced security.",
+    ],
+  },
+  {
+    title: "Web Developer and Designers",
+    company_name: "Strategic Transitions Inc",
+    date: "2014 – 2017",
+    iconBg: "#9ccd5d",
+    tasks: [
+      "Developed and integrated a license management system.",
+      "Implemented encryption techniques to secure user data.",
+      "Created a custom Content Management System (CMS).",
+      "Designed and developed company websites, including wireframing and coding.",
+    ],
+  },
+  {
+    title: "BPMS Administrator",
+    company_name: "NeXsys",
+    iconBg: "#5eb54a",
+    date: "2013",
+    tasks: [
+      "Built and implemented a license management system.",
+      "Secured user data through encryption methods.",
+      "Developed a customized CMS system.",
+      "Designed and coded company websites.",
+    ],
+  },
+];
 
 //Projects Section
 const allProjects = {
   projects: [
     {
       projectName: "Hang Your Banner",
-      projectDesc: "Create your own championship banners for teams that don't have real ones",
-      projectType: "React, Javascript, HTML, CSS",
+      projectDesc: "Create your own championship banners for teams that don't have real ones.",
+      projectType: "React, JavaScript, HTML, CSS",
       projectLink: "http://www.hangyourbanner.com",
       projectImage: hangYourBannerImage,
       projectLogo: hangYourBannerLogo,
@@ -79,17 +76,17 @@ const allProjects = {
     },
     {
       projectName: "AI Article Summarizer",
-      projectDesc: "Put the URL of an article and it will summarize the content",
-      projectType: "React, Javascript, HTML, CSS",
+      projectDesc: "Enter the URL of an article to get a summarized version of the content.",
+      projectType: "React, JavaScript, HTML, CSS",
       projectLink: "summarizer/index.html",
       projectImage: articleSummarizerImage,
       projectLogo: null,
       projectBgColor: null,
     },
-	  {
+    {
       projectName: "Kings",
-      projectDesc: "The digital version of the (commonly drinking) game Kings, incase you forget cards",
-      projectType: "Javascript, JQuery, HTML, CSS3",
+      projectDesc: "A digital version of the popular (drinking) game Kings, perfect for times when you don't have a deck of cards.",
+      projectType: "JavaScript, jQuery, HTML, CSS3",
       projectLink: "kings/index.html",
       projectImage: kingsImage,
       projectLogo: kingsLogo,
@@ -97,8 +94,8 @@ const allProjects = {
     },
     {
       projectName: "Xs and Os",
-      projectDesc: "Classic game Xs and Os - 2 player (Eventually on different computers)",
-      projectType: "Javascript, HTML, CSS3, localstorage",
+      projectDesc: "Classic two-player Tic Tac Toe game, with plans for online multiplayer.",
+      projectType: "JavaScript, HTML, CSS3, LocalStorage",
       projectLink: "tictactoe/index.html",
       projectImage: ticTacToeImage,
       projectLogo: null,
@@ -106,8 +103,8 @@ const allProjects = {
     },
     {
       projectName: "Sports Quiz",
-      projectDesc: "Quiz game that uses an API to fetch questions and keeps score",
-      projectType: "Javascript, HTML, CSS3, localstorage",
+      projectDesc: "Trivia game using an API to fetch questions and keep score.",
+      projectType: "JavaScript, HTML, CSS3, LocalStorage",
       projectLink: "quiz/index.html",
       projectImage: quizImage,
       projectLogo: null,
@@ -115,17 +112,17 @@ const allProjects = {
     },
     {
       projectName: "Simon Game",
-      projectDesc: "Remember the color pattern and repeat it by pressing the colored buttons",
-      projectType: "React, Javascript, HTML, CSS",
+      projectDesc: "Follow the color sequence and repeat it by pressing the colored buttons.",
+      projectType: "React, JavaScript, HTML, CSS",
       projectLink: "simon/index.html",
       projectImage: simonImage,
       projectLogo: simonLogo,
       projectBgColor: null,
     },
-  ]
+  ],
 };
 
-export {
-    experiences,
-    allProjects
+export { 
+  experiences,
+  allProjects 
 };
