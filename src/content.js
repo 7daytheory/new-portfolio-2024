@@ -5,11 +5,13 @@ import kingsImage from './assets/projects/kings.png';
 import ticTacToeImage from './assets/projects/tictactoe.png';
 import quizImage from './assets/projects/quiz.png';
 import simonImage from './assets/projects/simon.png';
+import pacmanImage from './assets/projects/pacman.png';
 
 //Project Logos
 import hangYourBannerLogo from './assets/projects/hangyourbanner-logo.svg';
 import kingsLogo from './assets/projects/kings-logo.png';
 import simonLogo from './assets/projects/simon-logo.png';
+import pacmanLogo from './assets/projects/pacman-logo.png';
 
 const experiences = [
   {
@@ -117,6 +119,15 @@ const allProjects = {
       projectLink: "simon/index.html",
       projectImage: simonImage,
       projectLogo: simonLogo,
+      projectBgColor: null,
+    },
+    {
+      projectName: "Pacman",
+      projectDesc: "Re-created the class game Pacman using Javascript with HTML5 Canvas",
+      projectType: "JavaScript, HTML, CSS",
+      projectLink: "pacman/index.html",
+      projectImage: pacmanImage,
+      projectLogo: pacmanLogo,
       projectBgColor: null,
     },
   ],
