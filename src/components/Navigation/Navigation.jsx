@@ -39,7 +39,7 @@ const Navigation = () => {
         </ul>);
         
     return (
-        <nav className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+        <nav className="border-gray-200 bg-gray-800 dark:bg-gray-800 dark:border-gray-700">
             <div className="container mx-auto p-4" style={{ maxWidth: "75%" }}>
                 <div className="flex flex-wrap items-center justify-between">
                     <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
