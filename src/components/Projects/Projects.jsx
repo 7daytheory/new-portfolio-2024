@@ -1,5 +1,3 @@
-
-import React from 'react'
 import { Fade } from "react-awesome-reveal";
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,7 +12,7 @@ const Projects = () => {
           </Fade>
             <div className="flex justify-center space-x-4 mt-12">
               <Fade duration={500} triggerOnce cascade >
-              <div className="flex flex-wrap justify-between gap-6 w-[70%] w-[70%] mx-auto">
+              <div className="flex flex-wrap justify-between gap-6 sm:w-[100%] lg:w-[75%] p-2 mx-auto">
                 {allProjects.projects.map((card, i) => {
                       return (
                         <ProjectCard

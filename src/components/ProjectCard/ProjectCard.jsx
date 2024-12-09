@@ -6,7 +6,7 @@ const ProjectCard = ({ cardInfo }) => {
   return (
     <a
       href={link}
-      className="relative sm:w-full sm:max-w-[300px] lg:max-w-[300px] lg:min-w-[300px] h-[300px] lg:h-[300px] rounded-[30px] overflow-hidden bg-slate-800 border border-2 border-white shadow-lg m-8 hover:shadow-xl flex flex-col group"
+      className="relative lg:w-[300px] min-w-[250px] lg:min-w-[300px] sm:w-[90%] h-[300px] sm:h-[250px] rounded-[30px] overflow-hidden bg-slate-800 border border-2 border-white shadow-lg m-8 hover:shadow-xl flex flex-col group"
       title={`View details about ${projectName}`}
     >
       {/* Image Section */}
