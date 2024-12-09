@@ -4,8 +4,10 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     overflow-x: hidden;
+    touch-action: pan-y;
 }
