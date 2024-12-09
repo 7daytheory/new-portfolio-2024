@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import logo from "../../assets/logo-white.png"
 import { Fade } from "react-awesome-reveal"
 
