@@ -48,7 +48,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="relative w-full p-4 sm:p-8 bg-white">
+    <div className="relative w-full p-4 sm:p-8 bg-white sm:w-[90%] lg:w-[75%] mx-auto">
       <Fade duration={2500}>
             <div className="text-red-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold" id="contact">CONTACT <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
