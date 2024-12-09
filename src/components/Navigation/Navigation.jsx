@@ -39,12 +39,12 @@ const Navigation = () => {
         </ul>);
         
     return (
-        <nav className="border-gray-200 bg-gray-800 dark:bg-gray-800 dark:border-gray-700">
+        <nav className="border-gray-200 bg-gray-800 border-gray-700">
             <div className="container mx-auto p-4" style={{ maxWidth: "75%" }}>
                 <div className="flex flex-wrap items-center justify-between">
                     <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <Fade direction="left" duration={1500} triggerOnce>
-                            <img src={logo} className="h-10" alt="MJL Design Logo" />
+                            <img src={logo} className="h-10" alt="MatthewwJLowe Logo" />
                         </Fade>
                     </a>
                     <button
@@ -73,8 +73,8 @@ const Navigation = () => {
                     className={`${mobileMenu ? "block" : "hidden"} w-full md:block md:w-auto`} 
                     id="navbar-solid-bg"
                     >
-                        <div className="flex flex-wrap justify-center -mx-5 -my-2">
-                            <div className="px-5 py-2">
+                        <div className="w-[100%] flex flex-wrap justify-center mx-5 my-2">
+                            <div className="px-5 py-2 w-[100%] text-center">
                             {!mobileMenu ? (
                             <Fade direction="down" duration={750} cascade triggerOnce>
                                 {navMenu}
