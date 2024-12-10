@@ -13,6 +13,17 @@ import kingsLogo from './assets/projects/kings-logo.png';
 import simonLogo from './assets/projects/simon-logo.png';
 import pacmanLogo from './assets/projects/pacman-logo.png';
 
+const contact =
+  {
+    contactHeader: "CONTACT ME",
+    contactSubmit: "Send Message",
+    contactName: "Enter Name",
+    contactEmail: "Enter email address",
+    contactSubject: "Enter Subject",
+    contactBody: "Please let me know how I can help."
+
+  }
+
 const banner =
   {
     bannerGreeting: "Hello!",
@@ -142,6 +153,7 @@ const allProjects = {
 };
 
 export {
+  contact,
   banner, 
   experiences,
   allProjects 
