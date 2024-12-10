@@ -39,7 +39,7 @@ import { resume } from '../../content';
     const { resumeHeader, resumeQuestion, resumeText, resumePDF, resumeDownload } = resume;
 
     return (
-    <div id="resume" className="relative w-[80%] mx-auto p-4 text-center p-8">
+    <div id="resume" className="relative lg:w-[80%] sm:w-[100%] mx-auto p-4 text-center p-8">
         <Fade duration={3500}>
             <div className="text-slate-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold">{resumeHeader} <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>

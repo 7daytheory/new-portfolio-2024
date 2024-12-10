@@ -58,7 +58,7 @@ const Contact = () => {
       <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-lg font-[sans-serif]">
       <div className="flex-1 space-y-4 w-full">
         <Fade duration={1000} triggerOnce>
-          <h1 className="text-red-800 text-[2.5em] text-center lg:hidden sm:block font-bold">{contactHeader}</h1>
+          <h1 className="text-red-800 text-[2em] text-center lg:hidden sm:block font-bold">{contactHeader}</h1>
           <form className='p-4 md:mt-8' onSubmit={handleSubmit}>
             <div className="relative z-0 w-full mb-5">
               <input
