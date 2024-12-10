@@ -11,7 +11,7 @@ const Footer = () => {
                     <Fade direction="up" duration={750} cascade triggerOnce>
                         <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent bg-gray-800 md:bg-transparent border-gray-700">
                             {navLinks.map((link, index) => (
-                                <li key={index}>
+                                <li key={index} className="mt-5 mb-5">
                                     <a
                                         href={link.href}
                                         className="text-base leading-6 text-slate-300 hover:text-gray-200"
