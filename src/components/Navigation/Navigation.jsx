@@ -1,4 +1,4 @@
-import logo from "../../assets/logo-white.png"
+import logo from "../../assets/logo-white.svg"
 import { Fade } from "react-awesome-reveal"
 import { useState } from "react";
 
@@ -40,11 +40,11 @@ const Navigation = () => {
 
     return (
         <nav className="border-gray-200 bg-gray-800 border-gray-700">
-            <div className="container mx-auto p-4" style={{ maxWidth: "75%" }}>
+            <div className="container mx-auto py-4 px-4 sm:py-4 sm:px-0 lg:max-w-[75%] sm:max-w-[90%]">
                 <div className="flex flex-wrap items-center justify-between">
-                    <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse ml-[10px]">
                         <Fade direction="left" duration={1500} triggerOnce>
-                            <img src={logo} className="h-10" alt="MatthewwJLowe Logo" />
+                            <img src={logo} className="lg:w-[275px] h-auto w-[175px]" alt="Matthew Lowe Logo" />
                         </Fade>
                     </a>
                     <button
@@ -54,7 +54,6 @@ const Navigation = () => {
                         className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
                         aria-controls="navbar-solid-bg"
                         aria-expanded={mobileMenu}>
-                        <span className="sr-only">Open main menu</span>
                         <svg
                             className="w-5 h-5"
                             aria-hidden="true"
