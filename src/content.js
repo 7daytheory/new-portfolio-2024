@@ -13,6 +13,14 @@ import kingsLogo from './assets/projects/kings-logo.png';
 import simonLogo from './assets/projects/simon-logo.png';
 import pacmanLogo from './assets/projects/pacman-logo.png';
 
+const banner =
+  {
+    bannerGreeting: "Hello!",
+    bannerIntro: "I am",
+    bannerName: "Matthew.",
+    bannerBlurb: "I am a developer with 10 years experience. I build Web and Mobile applications with JavaScript, React/Angular, PHP, Laravel/CakePHP, Bootstrap, Tailwindcss, Flexbox, and more. I also have a background in graphic design which has been a useful skill for smaller companies or for hot fixes."
+  }
+
 const experiences = [
   {
     title: "Full Stack Developer",
@@ -123,7 +131,7 @@ const allProjects = {
     },
     {
       projectName: "Pacman",
-      projectDesc: "Re-created the class game Pacman using Javascript with HTML5 Canvas",
+      projectDesc: "Re-created the classic game Pacman using Javascript with HTML5 Canvas",
       projectType: "JavaScript, HTML, CSS",
       projectLink: "pacman/index.html",
       projectImage: pacmanImage,
@@ -133,7 +141,8 @@ const allProjects = {
   ],
 };
 
-export { 
+export {
+  banner, 
   experiences,
   allProjects 
 };
