@@ -107,6 +107,15 @@ const experiences = [
   },
 ];
 
+const resume = {
+  resumeHeader: "RESUME",
+  resumeQuestion: "Would you like a copy of my Resume?",
+  resumeText: "You can download a PDF version of my resume below, I have altered it for the web to exclude my personal details.",
+  resumePDF: "PDF Version",
+  resumeDownload: "Download my resume",
+  resumeURL: "../../assets/resumeWeb.pdf",
+}
+
 //Projects Section
 const allProjects = {
   projects: [
@@ -179,8 +188,9 @@ const allProjects = {
 export {
   navigation,
   about,
+  resume,
   contact,
   banner, 
   experiences,
-  allProjects 
+  allProjects
 };

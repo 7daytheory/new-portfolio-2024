@@ -6,6 +6,7 @@ import MyResume from '../../assets/resumeWeb.pdf'
 import { Fade } from "react-awesome-reveal";
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import RequestKey from '../RequestKey/RequestKey';
+import { resume } from '../../content';
 
     const Resume = () => {
         const wrapRef = useRef(null);
@@ -30,22 +31,24 @@ import RequestKey from '../RequestKey/RequestKey';
         updateDimensions();
     }, []);
 
-    const handleApiClick = (e) => {
-        e.preventDefault();
-        setShowRequestForm(!showRequestForm);
-    };
+    // const handleApiClick = (e) => {
+    //     e.preventDefault();
+    //     setShowRequestForm(!showRequestForm);
+    // };
+
+    const { resumeHeader, resumeQuestion, resumeText, resumePDF, resumeDownload } = resume;
 
     return (
-    <div id="resume" className="relative w-full p-4 text-center bg-white shadow sm:p-8">
+    <div id="resume" className="relative w-[80%] mx-auto p-4 text-center p-8">
         <Fade duration={3500}>
-            <div className="text-slate-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold">RESUME <FontAwesomeIcon icon={faArrowDown} /></div>
+            <div className="text-slate-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold">{resumeHeader} <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
         <Fade direction='top' duration={1000}>
-            <h5 className="mb-2 mt-8 text-3xl font-bold text-slate-800 dark:text-white">Would you like a copy of my Resume?</h5>
+            <h5 className="mb-2 mt-8 text-3xl font-bold text-red-800">{resumeQuestion}</h5>
         </Fade>
         <Fade direction='bottom' duration={2000}>
             {/* <p className="mb-5 text-base sm:text-lg text-slate-800">You can download a PDF version or you can request an API key and receive it with a POST request.</p> */}
-            <p className="mb-5 text-base sm:text-lg text-slate-800">You can download a PDF version of my resume below, I have altered it for the web to exclude my personal details.</p>  
+            <p className="mb-5 text-base sm:text-lg text-slate-800">{resumeText}</p>  
             <p> </p>  
         </Fade>
         <div className="m-auto items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse mb-2">
@@ -63,7 +66,7 @@ import RequestKey from '../RequestKey/RequestKey';
                     <div className="-mt-1 font-sans text-sm font-semibold">Via an API</div>
                 </div>
             </a> */}
-            <a href={MyResume} id="pdfResume" download="Lowe, Matthew Resume" className="w-full inline sm:w-auto bg-slate-800 hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.25)] inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+            <a href={{MyResume}} id="pdfResume" download="Lowe, Matthew Resume" className="w-full inline sm:w-auto bg-slate-800 hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.25)] inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                 <img
                     src={pdfLogo} 
                     alt="Pdf Logo" 
@@ -71,8 +74,8 @@ import RequestKey from '../RequestKey/RequestKey';
                     style={{ width: 'auto', height: '100px' }} 
                 />
                 <div className="text-left rtl:text-right">
-                    <div className="mb-1 text-xs">Download my Resume</div>
-                    <div className="-mt-1 font-sans text-sm font-semibold">PDF Version</div>
+                    <div className="mb-1 text-xs">{resumeDownload}</div>
+                    <div className="-mt-1 font-sans text-sm font-semibold">{resumePDF}</div>
                 </div>
             </a>
             </Fade>
