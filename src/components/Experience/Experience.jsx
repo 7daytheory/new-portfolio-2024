@@ -1,14 +1,12 @@
-import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { experiences } from "../../content";
+import {experiences} from "../../content";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Fade } from "react-awesome-reveal";
-
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -54,8 +52,8 @@ const Experience = () => {
     <>
       <div className='flex flex-col bg-slate-800 mt-[50px]'>
         <VerticalTimeline>
-        <Fade duration={2500}><h1 className="text-white text-[3em] absolute ml-[5%] top-[-22px] font-bold" id="experience">EXPERIENCE <FontAwesomeIcon icon={faArrowDown} /></h1></Fade>
-          {experiences.map((experience, index) => (
+        <Fade duration={2500}><h1 className="text-white text-[3em] absolute ml-[5%] top-[-22px] font-bold" id="experience">{experiences.experiencesHeader} <FontAwesomeIcon icon={faArrowDown} /></h1></Fade>
+          {experiences.experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
