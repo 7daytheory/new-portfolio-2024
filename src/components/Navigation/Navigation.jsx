@@ -1,6 +1,6 @@
-import { useState } from "react"
 import logo from "../../assets/logo-white.png"
 import { Fade } from "react-awesome-reveal"
+import { useState } from "react";
 
 const Navigation = () => {
     const [mobileMenu, toggleMobileMenu] = useState(false);
@@ -37,7 +37,7 @@ const Navigation = () => {
             </a>
         </li>
         </ul>);
-        
+
     return (
         <nav className="border-gray-200 bg-gray-800 border-gray-700">
             <div className="container mx-auto p-4" style={{ maxWidth: "75%" }}>

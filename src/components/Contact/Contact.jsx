@@ -1,11 +1,12 @@
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import ClimbingPhoto from '../../assets/climbing-photo.jpg';
 import './Contact.css'
+import { contact, about } from '../../content';
  
 const Contact = () => {
   const [nameValue, setNameValue] = useState('');
@@ -47,14 +48,17 @@ const Contact = () => {
     );
   }
 
+  const { contactHeader, contactSubmit, contactName, contactEmail, contactSubject, contactBody } = contact;
+  const { aboutHeader, aboutIntroTop, aboutIntroBottom, aboutHobbies } = about;
   return (
     <div className="relative w-full p-4 sm:p-8 bg-white sm:w-[90%] lg:w-[75%] mx-auto">
       <Fade duration={2500}>
-            <div className="text-red-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold" id="contact">CONTACT <FontAwesomeIcon icon={faArrowDown} /></div>
+            <div className="text-red-800 text-[3em] absolute top-[-22px] hidden lg:block font-bold" id="contact">{contactHeader} <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
       <div className="flex flex-col sm:flex-row items-start gap-12 p-8 mx-auto max-w-4xl rounded-lg font-[sans-serif]">
       <div className="flex-1 space-y-4 w-full">
         <Fade duration={1000} triggerOnce>
+          <h1 className="text-red-800 text-[2.5em] text-center lg:hidden sm:block font-bold">{contactHeader}</h1>
           <form className='p-4 md:mt-8' onSubmit={handleSubmit}>
             <div className="relative z-0 w-full mb-5">
               <input
@@ -66,7 +70,7 @@ const Contact = () => {
                 required
                 className="pt-3 pb-2 block w-full md:w-3/4 px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
               />
-              <label htmlFor="name" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter name</label>
+              <label htmlFor="name" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">{contactName}</label>
             </div>
 
             <div className="relative z-0 w-full mb-5">
@@ -79,7 +83,7 @@ const Contact = () => {
                 required
                 className="pt-3 pb-2 block w-full md:w-3/4 px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
               />
-              <label htmlFor="email" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter email address</label>
+              <label htmlFor="email" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">{contactEmail}</label>
             </div>
 
             <div className="relative z-0 w-full mb-5">
@@ -91,7 +95,7 @@ const Contact = () => {
                 placeholder=" "
                 className="pt-3 pb-2 block w-full md:w-3/4 px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
               />
-              <label htmlFor="subject" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter subject</label>
+              <label htmlFor="subject" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">{contactSubject}</label>
             </div>
 
             <div className="relative z-0 w-full mb-5">
@@ -103,14 +107,14 @@ const Contact = () => {
                 rows="5"
                 className="pt-3 pb-2 block w-full md:w-3/4 px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
               />
-              <label htmlFor="message" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Please let me know how I can help</label>
+              <label htmlFor="message" className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">{contactBody}</label>
             </div>
 
             <div className="flex justify-end">
               <button
                 type='submit'
                 className="text-white bg-red-800 hover:bg-red-700 w-full lg:w-[35%] rounded-md text-sm shadow px-4 py-3 mt-4 md:mr-[25%]">
-                Send Message
+                {contactSubmit}
               </button>
             </div>
           </form>
@@ -119,14 +123,14 @@ const Contact = () => {
 
         <div className="flex-1">
           <Fade duration={1000} delay={1000} direction='right' triggerOnce>
-            <h1 className="text-4xl font-bold text-red-800 mb-2 mt-[-35px]">About Me</h1>
+            <h1 className="text-4xl font-bold text-red-800 mb-2 mt-[-35px]">{aboutHeader}</h1>
           </Fade>
           <div className='text-slate-800 text-sm'>
           <Fade duration={1500} delay={500} direction='left' triggerOnce>
-            <p>I'm an experienced application developer with 10 years in the industry. I enjoy roles where I'm not confined to the same thing daily, some days I'm building user-facing front-end pages with JavaScript/React, other days I'm porting old C code to create PWAs.</p>
+            <p>{aboutIntroTop}</p>
           </Fade>
           <Fade duration={750} delay={1250} direction='down' triggerOnce>
-            <p>My design skills also come in handy. I can quickly tweak CSS to solve design issues without needing a lengthy process, saving time for everyone.</p>
+            <p>{aboutIntroBottom}</p>
           </Fade>
           <Fade duration={500} delay={1500} triggerOnce>
             <div className="p-2 border border-4 border-white w-90-% lg:w-[75%] rounded-lg shadow-lg flex m-auto">
@@ -134,7 +138,7 @@ const Contact = () => {
             </div>
           </Fade>
           <Fade duration={1250} delay={750} direction='right' triggerOnce>
-            <p className="mt-2">Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
+            <p className="mt-2">{aboutHobbies}</p>
           </Fade>
           </div>
         </div>

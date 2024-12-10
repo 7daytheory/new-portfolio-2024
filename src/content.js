@@ -13,6 +13,49 @@ import kingsLogo from './assets/projects/kings-logo.png';
 import simonLogo from './assets/projects/simon-logo.png';
 import pacmanLogo from './assets/projects/pacman-logo.png';
 
+const navigation = {
+  navMenuText: "Open Main Menu",
+  navLinks: [
+    { label: "Home", href: "#" },
+    { label: "Experience", href: "#experience" },
+    { label: "Resume", href: "#resume" },
+    { label: "Examples", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ],
+  navCopyright: "© 2024 Matthew Lowe, Inc. All rights reserved",
+  navGithub: {
+    label: "Github",
+    href: "https://www.github.com/7daytheory",
+  },
+};
+
+const contact =
+  {
+    contactHeader: "CONTACT ME",
+    contactSubmit: "Send Message",
+    contactName: "Enter Name",
+    contactEmail: "Enter email address",
+    contactSubject: "Enter Subject",
+    contactBody: "Please let me know how I can help."
+
+  }
+
+const about =
+{
+  aboutHeader: "About Me",
+  aboutIntroTop: "I'm an experienced application developer with a decade in the industry, thriving in roles that offer variety and challenge. Some days, I’m crafting dynamic, user-focused front-end experiences with JavaScript and React; other days, I’m modernizing legacy C code to develop progressive web applications.",
+  aboutIntroBottom: "I also bring strong design skills to the table, allowing me to quickly fine-tune CSS to resolve design issues efficiently, cutting down on unnecessary back-and-forth and keeping projects on track.",
+  aboutHobbies: "Outside of work, I’m a passionate (American)football fan and a longtime rock climber. Climbing has been a consistent part of my life, and try to keep up with it because I love it, but because it helps me clear my head and stay focused",
+}
+
+const banner =
+  {
+    bannerGreeting: "Hello!",
+    bannerIntro: "I am",
+    bannerName: "Matthew.",
+    bannerBlurb: "I am a developer with 10 years experience. I build Web and Mobile applications with JavaScript, React/Angular, PHP, Laravel/CakePHP, Bootstrap, Tailwindcss, Flexbox, and more. I also have a background in graphic design which has been a useful skill for smaller companies or for hot fixes."
+  }
+
 const experiences = [
   {
     title: "Full Stack Developer",
@@ -63,6 +106,15 @@ const experiences = [
     ],
   },
 ];
+
+const resume = {
+  resumeHeader: "RESUME",
+  resumeQuestion: "Would you like a copy of my Resume?",
+  resumeText: "You can download a PDF version of my resume below, I have altered it for the web to exclude my personal details.",
+  resumePDF: "PDF Version",
+  resumeDownload: "Download my resume",
+  resumeURL: "../../assets/resumeWeb.pdf",
+}
 
 //Projects Section
 const allProjects = {
@@ -123,7 +175,7 @@ const allProjects = {
     },
     {
       projectName: "Pacman",
-      projectDesc: "Re-created the class game Pacman using Javascript with HTML5 Canvas",
+      projectDesc: "Re-created the classic game Pacman using Javascript with HTML5 Canvas",
       projectType: "JavaScript, HTML, CSS",
       projectLink: "pacman/index.html",
       projectImage: pacmanImage,
@@ -133,7 +185,12 @@ const allProjects = {
   ],
 };
 
-export { 
+export {
+  navigation,
+  about,
+  resume,
+  contact,
+  banner, 
   experiences,
-  allProjects 
+  allProjects
 };
