@@ -14,14 +14,19 @@ import simonLogo from './assets/projects/simon-logo.png';
 import pacmanLogo from './assets/projects/pacman-logo.png';
 
 const navigation = {
-  navMenu: "Open Main Menu",
+  navMenuText: "Open Main Menu",
   navLinks: [
-  { label: "Home", href: "#" },
-  { label: "Experience", href: "#experience" },
-  { label: "Resume", href: "#resume" },
-  { label: "Examples", href: "#projects" },
-  { label: "Contact", href: "#contact" },
-  ]
+    { label: "Home", href: "#" },
+    { label: "Experience", href: "#experience" },
+    { label: "Resume", href: "#resume" },
+    { label: "Examples", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ],
+  navCopyright: "© 2024 Matthew Lowe, Inc. All rights reserved",
+  navGithub: {
+    label: "Github",
+    href: "https://www.github.com/7daytheory",
+  },
 };
 
 const contact =
