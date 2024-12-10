@@ -13,6 +13,17 @@ import kingsLogo from './assets/projects/kings-logo.png';
 import simonLogo from './assets/projects/simon-logo.png';
 import pacmanLogo from './assets/projects/pacman-logo.png';
 
+const navigation = {
+  navMenu: "Open Main Menu",
+  navLinks: [
+  { label: "Home", href: "#" },
+  { label: "Experience", href: "#experience" },
+  { label: "Resume", href: "#resume" },
+  { label: "Examples", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+  ]
+};
+
 const contact =
   {
     contactHeader: "CONTACT ME",
@@ -161,6 +172,7 @@ const allProjects = {
 };
 
 export {
+  navigation,
   about,
   contact,
   banner, 
