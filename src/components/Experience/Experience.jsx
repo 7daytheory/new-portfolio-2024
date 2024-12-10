@@ -7,8 +7,19 @@ import {experiences} from "../../content";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Fade } from "react-awesome-reveal";
+import PropTypes from 'prop-types';
 
 const ExperienceCard = ({ experience }) => {
+  ExperienceCard.propTypes = {
+    experience: PropTypes.shape({
+      date: PropTypes.string.isRequired,
+      iconBg: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      company_name: PropTypes.string.isRequired,
+      tasks: PropTypes.arrayOf(PropTypes.string).isRequired,
+    }).isRequired,
+  };
+  
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -20,7 +31,7 @@ const ExperienceCard = ({ experience }) => {
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className='flex justify-center items-center w-full h-full'>
-          {/* Add a icon here */}
+          {/* Add company logo here*/}
         </div>
       }
     >
