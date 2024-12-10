@@ -24,6 +24,14 @@ const contact =
 
   }
 
+const about =
+{
+  aboutHeader: "About Me",
+  aboutIntroTop: "I'm an experienced application developer with a decade in the industry, thriving in roles that offer variety and challenge. Some days, I’m crafting dynamic, user-focused front-end experiences with JavaScript and React; other days, I’m modernizing legacy C code to develop progressive web applications.",
+  aboutIntroBottom: "I also bring strong design skills to the table, allowing me to quickly fine-tune CSS to resolve design issues efficiently, cutting down on unnecessary back-and-forth and keeping projects on track.",
+  aboutHobbies: "Outside of work, I’m a passionate (American)football fan and a longtime rock climber. Climbing has been a consistent part of my life, and try to keep up with it because I love it, but because it helps me clear my head and stay focused",
+}
+
 const banner =
   {
     bannerGreeting: "Hello!",
@@ -153,6 +161,7 @@ const allProjects = {
 };
 
 export {
+  about,
   contact,
   banner, 
   experiences,

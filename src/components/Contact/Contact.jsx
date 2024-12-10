@@ -6,7 +6,7 @@ import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import ClimbingPhoto from '../../assets/climbing-photo.jpg';
 import './Contact.css'
-import { contact } from '../../content';
+import { contact, about } from '../../content';
  
 const Contact = () => {
   const [nameValue, setNameValue] = useState('');
@@ -49,6 +49,7 @@ const Contact = () => {
   }
 
   const { contactHeader, contactSubmit, contactName, contactEmail, contactSubject, contactBody } = contact;
+  const { aboutHeader, aboutIntroTop, aboutIntroBottom, aboutHobbies } = about;
   return (
     <div className="relative w-full p-4 sm:p-8 bg-white sm:w-[90%] lg:w-[75%] mx-auto">
       <Fade duration={2500}>
@@ -122,14 +123,14 @@ const Contact = () => {
 
         <div className="flex-1">
           <Fade duration={1000} delay={1000} direction='right' triggerOnce>
-            <h1 className="text-4xl font-bold text-red-800 mb-2 mt-[-35px]">About Me</h1>
+            <h1 className="text-4xl font-bold text-red-800 mb-2 mt-[-35px]">{aboutHeader}</h1>
           </Fade>
           <div className='text-slate-800 text-sm'>
           <Fade duration={1500} delay={500} direction='left' triggerOnce>
-            <p>I'm an experienced application developer with 10 years in the industry. I enjoy roles where I'm not confined to the same thing daily, some days I'm building user-facing front-end pages with JavaScript/React, other days I'm porting old C code to create PWAs.</p>
+            <p>{aboutIntroTop}</p>
           </Fade>
           <Fade duration={750} delay={1250} direction='down' triggerOnce>
-            <p>My design skills also come in handy. I can quickly tweak CSS to solve design issues without needing a lengthy process, saving time for everyone.</p>
+            <p>{aboutIntroBottom}</p>
           </Fade>
           <Fade duration={500} delay={1500} triggerOnce>
             <div className="p-2 border border-4 border-white w-90-% lg:w-[75%] rounded-lg shadow-lg flex m-auto">
@@ -137,7 +138,7 @@ const Contact = () => {
             </div>
           </Fade>
           <Fade duration={1250} delay={750} direction='right' triggerOnce>
-            <p className="mt-2">Outside of work, I'm an avid football fan and a longtime (on-and-off) rock climber. I try to climb every other day because I find it clears my head, and obviously because I love to do it.</p>
+            <p className="mt-2">{aboutHobbies}</p>
           </Fade>
           </div>
         </div>
