@@ -1,4 +1,4 @@
-import logo from "../../assets/logo-white.png"
+import logo from "../../assets/logo-white.svg"
 import { Fade } from "react-awesome-reveal"
 import { useState } from "react";
 
@@ -44,7 +44,7 @@ const Navigation = () => {
                 <div className="flex flex-wrap items-center justify-between">
                     <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <Fade direction="left" duration={1500} triggerOnce>
-                            <img src={logo} className="h-10" alt="MatthewwJLowe Logo" />
+                            <img src={logo} className="w-[275px] h-auto" alt="Matthew Lowe Logo" />
                         </Fade>
                     </a>
                     <button
