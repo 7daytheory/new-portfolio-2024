@@ -72,7 +72,7 @@ const Navigation = () => {
                     className={`${mobileMenu ? "block" : "hidden"} w-full md:block md:w-auto`} 
                     id="navbar-solid-bg"
                     >
-                        <div className="w-[100%] flex flex-wrap justify-center mx-5 my-2">
+                        <div className="w-[100%] flex flex-wrap justify-center lg:mx-5 sm:mx-0 my-2">
                             <div className="px-5 py-2 w-[100%] text-center">
                             {!mobileMenu ? (
                             <Fade direction="down" duration={750} cascade triggerOnce>
