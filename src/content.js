@@ -61,8 +61,10 @@ const banner =
   }
 
 //Experience Section
-const experiences = [
-  {
+const experiences = {
+  experiencesHeader: "EXPERIENCE",
+  experiences: [
+    {
     title: "Full Stack Developer",
     company_name: "ShipEarly",
     iconBg: "#ff6347",
@@ -110,7 +112,8 @@ const experiences = [
       "Designed web components for the senior developer",
     ],
   },
-];
+  ],
+};
 
 //Resume Section
 const resume = {
@@ -124,6 +127,7 @@ const resume = {
 
 //Projects Section
 const allProjects = {
+  projectsHeader: "PROJECTS",
   projects: [
     {
       projectName: "Hang Your Banner",
