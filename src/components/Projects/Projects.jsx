@@ -23,7 +23,8 @@ const Projects = () => {
                             projectType: card.projectType,
                             link: card.projectLink,
                             projectImage: card.projectImage,
-                            projectLogo: card.projectLogo
+                            projectLogo: card.projectLogo,
+                            projectLabel: card.projectLabel,
                           }}
                         />
                       );
