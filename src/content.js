@@ -137,6 +137,7 @@ const allProjects = {
       projectImage: hangYourBannerImage,
       projectLogo: hangYourBannerLogo,
       projectBgColor: null,
+      projectLabel: false,
     },
     {
       projectName: "AI Article Summarizer",
@@ -146,6 +147,7 @@ const allProjects = {
       projectImage: articleSummarizerImage,
       projectLogo: null,
       projectBgColor: null,
+      projectLabel: false,
     },
     {
       projectName: "Kings",
@@ -155,6 +157,7 @@ const allProjects = {
       projectImage: kingsImage,
       projectLogo: kingsLogo,
       projectBgColor: null,
+      projectLabel: false,
     },
     {
       projectName: "Xs and Os",
@@ -164,6 +167,7 @@ const allProjects = {
       projectImage: ticTacToeImage,
       projectLogo: null,
       projectBgColor: null,
+      projectLabel: false,
     },
     {
       projectName: "Sports Quiz",
@@ -173,6 +177,7 @@ const allProjects = {
       projectImage: quizImage,
       projectLogo: null,
       projectBgColor: null,
+      projectLabel: false,
     },
     {
       projectName: "Simon Game",
@@ -182,6 +187,7 @@ const allProjects = {
       projectImage: simonImage,
       projectLogo: simonLogo,
       projectBgColor: null,
+      projectLabel: "Desktop",
     },
     {
       projectName: "Pacman",
@@ -191,6 +197,7 @@ const allProjects = {
       projectImage: pacmanImage,
       projectLogo: pacmanLogo,
       projectBgColor: null,
+      projectLabel: "Desktop",
     },
   ],
 };
