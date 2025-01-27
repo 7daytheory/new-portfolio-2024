@@ -41,7 +41,7 @@ import { resume } from '../../content';
     return (
     <div id="resume" className="relative lg:w-[80%] sm:w-[100%] mx-auto p-4 text-center p-8">
         <Fade duration={3500}>
-            <div className="text-slate-800 text-[3em] absolute ml-[5%] top-[-22px] font-bold">{resumeHeader} <FontAwesomeIcon icon={faArrowDown} /></div>
+            <div className="text-slate-800 text-[3em] absolute top-[-22px] font-bold">{resumeHeader} <FontAwesomeIcon icon={faArrowDown} /></div>
         </Fade>
         <Fade direction='top' duration={1000}>
             <h5 className="mb-2 mt-8 text-3xl font-bold text-red-800">{resumeQuestion}</h5>
