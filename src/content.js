@@ -23,7 +23,7 @@ const navigation = {
     { label: "Examples", href: "#projects" },
     { label: "Contact", href: "#contact" },
   ],
-  navCopyright: "© 2024 Matthew Lowe, Inc. All rights reserved",
+  navCopyright: `© ${new Date().getFullYear()} Matthew Lowe, Inc. All rights reserved`,
   navGithub: {
     label: "Github",
     href: "https://www.github.com/7daytheory",
