@@ -64,6 +64,19 @@ const banner =
 const experiences = {
   experiencesHeader: "EXPERIENCE",
   experiences: [
+      {
+      title: "Full Stack Developer",
+      company_name: "Freelance",
+      iconBg: "#ff6347",
+      date: "2024 - Current",
+      tasks: [
+        "I was hired before I finished college and stared working the day after I graduated, I had never not been working full-time",
+        "Gave myself a break to focus on myself, family, and health but I am now wxcited to be looking for new opportunities",
+        "Developed the front-end of a SaaS application that passed sensitive medical data to patients, nurses, aand doctors",
+        "Worked on optimizing database structures using normalization (1NF-5NF) for safe, scalable data that elimincates redundancies",
+        "Made coding interesting and fun again by woruing on a variety of projects, from front-end to back-end, and design work",
+      ],
+    },
     {
     title: "Full Stack Developer",
     company_name: "ShipEarly",
@@ -73,7 +86,7 @@ const experiences = {
       "Small company contract role to work on the front and back end of their B2B application",
       "Developed a sales system integrated with Salesforce using Cake PHP and Javascript for both front-end and back-end",
       "Collaborated via Git, integrated it with Trello, and participated in and ran code reviews",
-      "Independently learned the codebase and taught it to a junior developer while doing it",
+      "Worked independently to learn the codebase and taught it to a junior developer while doing it",
     ],
   },
   {
