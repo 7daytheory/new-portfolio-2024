@@ -1,9 +1,9 @@
-# New Portfolio 2024
+# New Portfolio 2025
 
 This project is a personal portfolio website built using React, Vite, and Tailwind CSS. It showcases various sections like the banner, projects, experience, contact form, and more. The project is designed to be responsive and includes features like animations, form submissions, and toast notifications.
 
 ## Table of Contents
-- [New Portfolio 2024](#new-portfolio-2024)
+- [New Portfolio 2025](#new-portfolio-2025)
   - [Table of Contents](#table-of-contents)
   - [Demo](#demo)
   - [Features](#features)
@@ -50,11 +50,11 @@ To get a local copy up and running, follow these steps:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/new-portfolio-2024.git
+   git clone https://github.com/yourusername/new-portfolio-2025.git
 
 2. Navigate to repository:
    ```bash
-   cd new-portfolio-2024
+   cd new-portfolio-2025
 
 3. Install dependencies:
    ```bash
